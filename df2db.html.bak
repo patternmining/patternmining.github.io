@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Woody - Carpenter Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+          rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/github.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- Spinner Start -->
+<div id="spinner"
+     class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<!-- Spinner End -->
+
+
+<!-- Topbar Start -->
+<div class="container-fluid bg-light p-0">
+    <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                <small>123 Street, New York, USA</small>
+            </div>
+            <div class="h-100 d-inline-flex align-items-center py-3">
+                <small class="far fa-clock text-primary me-2"></small>
+                <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+            </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-phone-alt text-primary me-2"></small>
+                <small>+012 345 6789</small>
+            </div>
+            <div class="h-100 d-inline-flex align-items-center">
+                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary">WooDY</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="service.html" class="nav-item nav-link">Service</a>
+            <a href="project.html" class="nav-item nav-link">Project</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a href="feature.html" class="dropdown-item">Feature</a>
+                    <a href="quote.html" class="dropdown-item">Free Quote</a>
+                    <a href="team.html" class="dropdown-item">Our Team</a>
+                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    <a href="404.html" class="dropdown-item">404 Page</a>
+                </div>
+            </div>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+        <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i
+                class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
+                         alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                    This article covers the following topics:
+                    <ol>
+                        <li>Dense dataframe</li>
+                        <li>Sparse dataframe</li>
+                        <li>Approaches to convert a dataframe into various database formats</li>
+                        <li>An advanced technique to convert a dataframe to dense database</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
+                         alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                    <h2>Dense dataframe</h2>
+                    <h3>Description</h3>
+                    <p>A dense dataframe is basically a  matrix in which the first column represents the row-identifier/timestamp
+                    and the remaining columns represent the items and their values. T</p>
+
+                    <h3>Format of a dense dataframe</h3>
+                    <div class="language-plaintext highlighter-rouge">
+                        <div class="highlight">
+                            <pre class="highlight"><code>  rowIdentifier/timestamp   Item1   Item2   ... ItemN</code></pre>
+                        </div>
+                    </div>
+
+                    <h3 id="an-example">An example</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>timestamp</th>
+                                <th>Bread</th>
+                                <th>Jam</th>
+                                <th>Butter</th>
+                                <th>Books</th>
+                                <th>Pencil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>7</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>10</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>In the above dataframe (or table), the first transaction (or row) provides the information that a customer has purchased the 3 packets
+                    of Bread, 1 bottle of Jam, 3 packets of Butter at the timestamp of 1. The second transaction provides the information
+                    that a customer has purchased 7 packets of Bread, 2 bottles of Jam, 10 Books and 20 Pencils. Similar arguments can be
+                    made for the remaining transactions in the above dataframe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
+                         alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                        <h2>Sparse dataframe</h2>
+                        <h3>Description</h3>
+                        <p>A sparse dataframe is basically a (non-sparse) matrix in which the first column represents the row-identifier/timestamp,
+                        the second column represents the item, and the third column represents the value of the corresponding item.</p>
+
+                        <h3>Format of a sparse data frame</h3>
+
+                        <div class="language-plaintext highlighter-rouge">
+                            <div class="highlight">
+                                <pre class="highlight"> <code>  rowIdentifier/timestamp   Item1   Value</code></pre>
+                            </div>
+                        </div>
+
+                        <h3>An example</h3>
+                        <p>A sparse dataframe generated from the customer purchase database is as follows:</p>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>timestamp</th>
+                                    <th>Item</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Bread</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Jam</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Butter</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Bread</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jam</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>…</td>
+                                    <td>…</td>
+                                    <td>…</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+                <div class="p-lg-5 pe-lg-0">
+                    <h2>Conversion of dense dataframe into different database formats</h2>
+                    <p>
+                        Currently, PAMI supports converting a dataframe into a transactional database, temporal database, ond a utility database.
+                        The users can avail this support by employing the functions available in
+                        <strong>dataPreprocessing.dense2DB</strong>
+                         class.
+                    </p>
+
+                    <h3>Dense dataframe to transactional database</h3>
+                    <h4>Description</h4>
+                    <p>A <a href="transactionalDB.html">transactional database</a> represents a sparse and binary representation of items occurring in a dataframe.
+                        The steps to convert a dataframe into a transactional database is as follows:
+                    </p>
+
+                    <ol>
+                        <li>
+                            Initialize the dense2DB class by passing the following three parameters:
+
+                            <ol>
+                                <li>inputDataFrame  - the dataframe that needs to converted into a database</li>
+                                <li>thresholdValue  - this value will be used to convert a non-binary data frame into a binary database</li>
+                                <li>condition       - The condition that needs to employed on the threshold value. Currently, the users can specify
+                                the following six constraints: &gt;, &gt;=, &lt;, &lt;=, ==, and !=.</li>
+                            </ol>
+                        </li>
+                        <li>Call ‘createTransactional(outputFileName)’ method to store the dataframe as a transactional database.</li>
+                    </ol>
+
+                    <h4 id="sample-code">Sample code</h4>
+                    <pre><code class="highlight" >from PAMI.extras.DF2DB import denseDF2DB as pro
+import pandas as pd
+
+# Objective: convert the above dataframe into a transactional database with items whose value is greater than or equal 1.
+db = pro.denseDF2DB(inputDF=pd.DataFrame('mentionDataFrame'), thresholdValue=1, condition='&gt;=')
+# Convert and store the dataframe as a transactional database file
+db.createTransactional(outputFile='/home/userName/transactionalDB.txt')
+# Getting the fileName of the transactional database
+print('The output file is saved at ' + db.getFileName())</code>
+                    </pre>
+
+                    <h3 id="dense-dataframe-to-a-temporal-database">Dense dataframe to a temporal database</h3>
+                    <h4 id="description-1">Description</h4>
+                    <p>
+                        A
+                        <a href="temporalDB.html">temporal database</a>
+                         represents a sparse and binary representation of items occurring at a particular timestamp
+                        in a dataframe.  The steps to convert a dataframe into a temporal database is as follows:
+                    </p>
+
+                    <ol>
+                        <li>
+                            Initialize the dense2DB class by passing the following three parameters:
+
+                            <ol>
+                                <li>inputDataFrame  - the dataframe that needs to converted into a database</li>
+                                <li>thresholdValue  - this value will be used to convert a non-binary data frame into a binary database</li>
+                                <li>condition       - The condition that needs to employed on the threshold value. Currently, the users can specify
+                                the following six constraints: &gt;, &gt;=, &lt;, &lt;=, ==, and !=.</li>
+                            </ol>
+                        </li>
+                        <li>Call ‘createTemporal(outputFileName)’ method to store the dataframe as a temporal database.</li>
+                    </ol>
+
+                    <h4 id="sample-code-1">Sample code</h4>
+                    <pre>
+                        <code class="language-Python">from PAMI.extras.DF2DB import denseDF2DB as pro
+                        import pandas as pd
+
+                        # Objective: convert the above dataframe into a transactional database with items whose value is greater than or equal 1.
+                        db = pro.denseDF2DB(inputDF=pd.DataFrame('mentionDataFrame'), thresholdValue=1, condition='&gt;=')
+                        # Convert and store the dataframe as a temporal database file
+                        db.createTemporal(outputFile='/home/userName/temporalDB.txt')
+                        # Getting the fileName of the temporal database
+                        print('The output file is saved at ' + db.getFileName())
+
+                        </code>
+                    </pre>
+                    <h3 id="converting-a-dense-dataframe-into-a-utility-database">Converting a dense dataframe into a utility database</h3>
+                    <h4 id="description-2">Description</h4>
+                    <p>
+                        A
+                        <a href="utilityDB.html">utility database</a>
+                         represents a sparse and non-binary representation of items occurring in
+                        each row of a dataframe.  The steps to convert a dataframe into a utility database is as follows:
+                    </p>
+
+                    <ol>
+                        <li>
+                            Initialize the dense2DB class by passing the following three parameters:
+
+                            <ol>
+                                <li>inputDataFrame  - the dataframe that needs to converted into a database</li>
+                                <li>thresholdValue  - this value will be used to convert a non-binary data frame into a binary database</li>
+                                <li>condition       - The condition that needs to employed on the threshold value. Currently, the users can specify
+                                the following six constraints: &gt;, &gt;=, &lt;, &lt;=, ==, and !=.</li>
+                            </ol>
+                        </li>
+                        <li>Call ‘createUtility(outputFileName)’ method to store the dataframe as a temporal database.</li>
+                    </ol>
+
+                    <h4 id="sample-code-2">Sample code</h4>
+                    <pre>
+                        <code class="language-Python">from PAMI.extras.DF2DB import denseDF2DB as pro
+                        import pandas as pd
+
+                        # Objective: convert the above dataframe into a utility database with items whose value is greater than or equal 1.
+                        db = pro.denseDF2DB(inputDF=pd.DataFrame('mentionDataFrame'), thresholdValue=1, condition='&gt;=')
+                        # Convert and store the dataframe as a utility database file
+                        db.createUtility(outputFile='/home/userName/utilityDB.txt')
+                        # Getting the fileName of the utility database
+                        print('The output file is saved at ' + db.getFileName())
+
+                        </code>
+                    </pre>
+                </div>
+</div>
+
+
+<!--
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
+                         alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                        WRITE YOUR TEXT HERE
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+About End -->
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">PAMI: PAttern MIning</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+</body>
+
+</html>

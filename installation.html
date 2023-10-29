@@ -27,6 +27,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/github.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -134,37 +135,35 @@
                 <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-lg-5 pe-lg-0">
                         <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">Approach: PYPI</h1>
+                            <h1 class="display-5 mb-4">PYPI</h1>
                         </div>
                         <p class="mb-4 pb-2">
                             PAMI library is maintained at <a href="https://pypi.org/project/pami/" target="_blank"> Python Package Index (PyPI) repository.</a> Henceforth, the users can install PAMI library using <i>pip</i> command.
                         </p>
-                        <p>
-                            <b><u>Installation</u></b><br />
-                            Depending on the computer hardware and/or type of algorithms you plan to execute to find the patterns, execute anyone of the below-provided commands to install PAMI library.
-                            <table bgcolor="#f0f8ff">
-                                <tr><td><b>pip install pami</b></td></tr>
-                                <tr><td><b>pip install 'pami[gpu]'</b></td></tr>
-                                <tr><td><b>pip install 'pami[spark]'</b></td></tr>
-                                <tr><td><b>pip install 'pami[all]'</b></td></tr>
-                            </table>
-                        </p>
-                        <p>
-                            <b><u>Update</u></b><br />
-                            Execute below provided command to update the PAMI library.
-                             <table bgcolor="#f0f8ff">
-                                <tr><td><b>pip install --upgrade pami</b></td></tr>
-                            </table>
 
-                        </p>
-                        <p>
-                            <b><u>Uninstallation</u></b><br />
-                            Execute below provided command to uninstall the PAMI library.
-                            <table bgcolor="#f0f8ff">
-                                <tr><td><b>pip uninstall pami</b></td></tr>
-                            </table>
+                        <b><u>Installation</u></b><br />
+                        Depending on the computer hardware and/or type of algorithms you plan to execute to find the patterns, execute anyone of the below-provided commands to install PAMI library.
+                        <div class="highlight">
+                            <pre class="highlight"><code> pip install pami<br /><br /> pip install 'pami[gpu]' <br /><br /> pip install 'pami[spark]' <br /><br /> pip install 'pami[all]'</code></pre>
+                        </div>
 
-                        </p>
+                        <b><u>Update</u></b><br />
+                        Execute below provided command to update the PAMI library.
+                        <div class="highlight">
+                            <pre class="highlight"><code> pip install --upgrade pami </code></pre>
+                        </div>
+
+                        <b><u>Show contents</u></b><br />
+                        Execute below provided command to view the basic info on PAMI library.
+                        <div class="highlight">
+                            <pre class="highlight"><code> pip show pami</code></pre>
+                        </div>
+
+                        <b><u>Uninstallation</u></b><br />
+                        Execute below provided command to uninstall the PAMI library.
+                        <div class="highlight">
+                            <pre class="highlight"><code> pip uninstall pami</code></pre>
+                        </div>
                     </div>
                 </div>
             </div>
