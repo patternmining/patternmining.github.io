@@ -132,48 +132,73 @@
 
 
     <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Select the implementation technique</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/transactional.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Topic 1</h4>
-                            <p>Implementing a pattern mining algorithm on a dataset at a single constraint value</p>
-                            <a class="fw-medium" href="executeAlgorithmAtSingleConstraint.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/temporal.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Topic 2</h4>
-                            <p>Implementing a pattern mining algorithm on a dataset at multiple constraint values.</p>
-                            <a class="fw-medium" href="executeAlgorithmAtMultipleConstraints.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/georeferencial.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Topic 3</h4>
-                            <p>Evaluation of multiple pattern mining algorithms on a dataset at multiple constraint values</p>
-                            <a class="fw-medium" href="executeVariousAlgorithmsOnDatabaseAtMultipleConstraints.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container about px-lg-0">
+                <h1 class="display-5 mb-5">Mining interesting patterns using an algorithm</h1>
+                <div class="service-item">
+                    <p>In this page, we first describe the basic syntax to implement a mining algorithm. Next, we provide an example to implement a mining algorithm.</p>
+                    <hr />
+                    <h3>Syntax to implement an algorithm</h3>
+                    <pre class="highlight"><code class="language-Python"># import the necessary algorithm from the PAMI library
+from PAMI.&lt;model&gt;.&lt;basic/closed/maximal/topK&gt; import &lt;algorithmName&gt; as alg
+
+# Call the necessary algorithm by passing necessary input parameters. The input parameters include inputFileName and the user-specified constraints.
+obj = alg.&lt;algorithmName&gt;(&lt;input parameters&gt;)
+
+# Start the mining algorithm
+obj.startMine()
+
+# Collect the patterns discovered by the algorithm in the database
+discoveredPatterns = obj.getDiscoveredPatterns()
+
+# Print the total number of patterns
+print("Total number of discovered patterns:", len(discoveredPatterns))
+
+# Store the discovered patterns in a file.
+obj.save('&lt;outputFileName&gt;')
+
+# Output the discovered patterns as a data frame
+Df = obj.getPatternInDataFrame()
+
+# Calculate the [USS] memory consumed by the algorithm
+print("Total Memory in USS:", obj.getMemoryUSS())
+
+# Calculate the RSS memory consumed by the algorithm. We suggest using RSS memory for the memory comparison
+print("Total Memory in RSS", obj.getMemoryRSS())
+
+# Calculate the runtime requirements by the algorithm
+print("Total ExecutionTime in seconds:", obj.getRuntime())
+</code></pre>
+                    <hr />
+                    <h3> Example: Mining frequent patterns in a transactional database using FP-growth</h3>
+                    <p><strong>Note:</strong> <a href="https://u-aizu.ac.jp/~udayrage/datasets/transactionalDatabases/Transactional_T10I4D100K.csv">Click here to download the transactional database</a></p>
+<pre class="highlight"><code class="language-Python">#import the frequent pattern mining algorithm
+from PAMI.frequentPattern.basic import FPGrowth as alg
+
+#inputFile = 'fileName'
+inputFile = 'Transactional_T10I4D100K.csv'
+
+#specify the constraints used in the model
+minSup=400
+
+#create the object of the mining algorithm
+obj = alg.FPGrowth(inputFile, minSup)
+
+#start the mining process
+obj.startMine()
+
+#Print the number of interesting patterns generated
+print("Total number of Frequent Patterns:", len(obj.getPatterns()))
+
+#Save the generated patterns in a file
+obj.save('outputFile.tsv')
+
+# Determine the memory consumed by the mining algorithm
+print("Total Memory in RSS", obj.getMemoryRSS())
+
+# Determine the total runtime consumed by the mining algorithm
+print("Total ExecutionTime in seconds:", obj.getRuntime())
+</code></pre>
             </div>
         </div>
     </div>

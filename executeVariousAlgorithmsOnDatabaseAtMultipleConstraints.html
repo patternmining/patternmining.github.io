@@ -132,49 +132,112 @@
 
 
     <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Select the implementation technique</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/transactional.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Topic 1</h4>
-                            <p>Implementing a pattern mining algorithm on a dataset at a single constraint value</p>
-                            <a class="fw-medium" href="executeAlgorithmAtSingleConstraint.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container about px-lg-0">
+                <h1 class="display-5 mb-5">Evaluating Multiple Pattern Mining Algorithms on a Dataset</h1>
+                <div class="service-item">
+                    <h4>Step 1: Creation of pandas data frame to store the results of multiple algorithms</h4>
+
+<pre class="highlight"><code class="language-Python">import pandas as pd
+result = pd.DataFrame(columns=['algorithm', 'minSup', 'patterns', 'runtime', 'memory'])
+</code></pre>
+<p><strong>Note:</strong> The first column of data frame has to be ‘algorithm.’  Otherwise, the code will generate the error.</p>
+
+<h4>Step 2: Declaring the name of the dataset</h4>
+
+<pre class="highlight"><code class="language-Python">#inputFile = 'fileName'
+inputFile = 'Transactional_T10I4D100K.csv'
+</code></pre>
+
+<p><a href="https://u-aizu.ac.jp/~udayrage/datasets/transactionalDatabases/Transactional_T10I4D100K.csv">Click here to download the dataset.</a></p>
+
+<h4>Step 3: Specify the range of values for an input parameter</h4>
+
+<pre class="highlight"><code class="language-Python">#constraintList = [array of values]
+minSupList = [400,500,600,700,800,900,1000]
+</code></pre>
+
+<h4>Step 4: Declare the algorithm name, import and execute it, and store the results in the data frame</h4>
+
+<pre class="highlight"><code class="language-Python">#algorithmName = 'name of the algorithm'
+algorithmName = 'Apriori'
+
+#import the mining algorithm
+from PAMI.frequentPattern.basic import Apriori as alg
+
+# execute the mining algorithm at different constraint values using the for loop
+#for constraint in constraintList:
+for minSup in minSupList:
+    #create an object of the mining algorithm
+    obj = alg.Apriori(inputFile,minSup, sep='\t')
+
+    #start the mining process
+    obj.startMine()
+
+    #append the results into the data frame
+    result.loc[result.shape[0]] = [algorithmName, minSup, len(obj.getPatterns()), obj.getRuntime(), obj.getMemoryRSS()]
+</code></pre>
+
+<h4>Step 5: Repeat Step-4 for each other pattern mining algorithms</h4>
+
+<pre class="highlight"><code class="language-Python">#algorithmName = 'name of the algorithm'
+algorithmName = 'FPGrowth'
+
+#import the mining algorithm
+from PAMI.frequentPattern.basic import FPGrowth as alg
+
+# execute the mining algorithm at different constraint values using the for loop
+#for constraint in constraintList:
+for minSup in minSupList:
+    #create an object of the mining algorithm
+    obj = alg.FPGrowth(inputFile,minSup, sep='\t')
+
+    #start the mining process
+    obj.startMine()
+
+    #append the results into the data frame
+    result.loc[result.shape[0]] = [algorithmName, minSup, len(obj.getPatterns()), obj.getRuntime(), obj.getMemoryRSS()]
+
+#---------------------------------
+#Repeating above steps for another algorithm
+
+#algorithmName = 'name of the algorithm'
+algorithmName = 'ECLAT'
+
+#import the mining algorithm
+from PAMI.frequentPattern.basic import ECLAT as alg
+
+# execute the mining algorithm at different constraint values using the for loop
+#for constraint in constraintList:
+for minSup in minSupList:
+    #create an object of the mining algorithm
+    obj = alg.ECLAT(inputFile,minSup, sep='\t')
+
+    #start the mining process
+    obj.startMine()
+
+    #append the results into the data frame
+    result.loc[result.shape[0]] = [algorithmName, minSup, len(obj.getPatterns()), obj.getRuntime(), obj.getMemoryRSS()]
+</code></pre>
+<h4>Step 6: Visualizing the comparative results</h4>
+
+<pre class="highlight"><code class="language-Python">#Import the library
+from PAMI.extras.graph import dataFrameInToFigures as dif
+    #Pass the result data frame to the class
+    ab = dif.dataFrameInToFigures(result)
+    #Draw the graphs
+    ab.plotGraphsFromDataFrame()
+</code></pre>
+
+<h4>Step 7: Creating Latex files for graphs</h4>
+
+<pre class="highlight"><code class="language-Python">#Import the library
+from PAMI.extras.graph import generateLatexFileFromDataFrame as gdf
+    #Pass the result data frame
+    gdf.generateLatexCode(result)
+</code></pre>
+<p><strong>Note:</strong> The <em>generateLatexCode</em> program create three latex files, namely <em>patternsLatexfile.tex</em>, <em>memoryLatexfile.tex</em>, and <em>runtimeLatexfile.tex</em>.</p>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/temporal.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Topic 2</h4>
-                            <p>Implementing a pattern mining algorithm on a dataset at multiple constraint values.</p>
-                            <a class="fw-medium" href="executeAlgorithmAtMultipleConstraints.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/georeferencial.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Topic 3</h4>
-                            <p>Evaluation of multiple pattern mining algorithms on a dataset at multiple constraint values</p>
-                            <a class="fw-medium" href="executeVariousAlgorithmsOnDatabaseAtMultipleConstraints.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <!-- Service End -->

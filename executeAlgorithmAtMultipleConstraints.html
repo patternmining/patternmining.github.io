@@ -132,51 +132,95 @@
 
 
     <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Select the implementation technique</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/transactional.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Topic 1</h4>
-                            <p>Implementing a pattern mining algorithm on a dataset at a single constraint value</p>
-                            <a class="fw-medium" href="executeAlgorithmAtSingleConstraint.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container about px-lg-0">
+                <center><h1 class="display-5 mb-5">Mining interesting patterns at different constraint values using an algorithm</h1></center>
+                <div class="service-item">
+                    <p>This page first describes the syntax to implement a mining algorithm on a database at different constraint values. Next, this page provides an example to execute a pattern mining algorithm on a database at different constraint values.</p>
+                    <hr />
+                    <h3>Syntax to implement an algorithm</h3>
+<pre class="highlight"><code># import the necessary algorithm from the PAMI library
+from PAMI.&lt;model&gt;.&lt;basic/closed/maximal/topK&gt; import &lt;algorithmName&gt; as alg
+algorithm='Algorithm Name'
+
+#Create a data frame to store the values
+import pandas as pd
+result = pd.DataFrame(columns=['algorithm', 'minSup', 'patterns', 'runtime', 'memory'])
+
+#Specify the List of constraint values
+constraintList =['List of values']
+
+#For each value in the constraint list
+for constraint in constraintList:
+    # Call the necessary algorithm by passing necessary input parameters. The input parameters include inputFileName and the user-specified constraints.
+    obj = alg.&lt;algorithmName&gt;(&lt;input parameters&gt;)
+
+    # Start the mining algorithm
+    obj.startMine()
+
+    #store the results in the data frame
+    result.loc[result.shape[0]] = [algorithm, constraint, len(obj.getPatterns()), obj.getRuntime(), obj.getMemoryRSS()]
+
+#Print the dataframe
+result
+
+#Visualize the plots
+from PAMI.extras.graph import dataFrameInToFigures as dif
+    #Pass the result data frame to the class
+    ab = dif.dataFrameInToFigures(result)
+    #Draw the graphs
+    ab.plotGraphsFromDataFrame()
+</code></pre>
+            <hr />
+            <h3>Example: Mining frequent patterns in a transactional database at different mininimum support values using FP-growth</h3>
+
+<pre class="highlight"><code class="language-Python">#Import the mining algorithm
+from PAMI.frequentPattern.basic import FPGrowth  as alg
+
+#Import pandas data frame to store the values
+import pandas as pd
+
+#Initialize the data frame
+result = pd.DataFrame(columns=['algorithm', 'minSup', 'patterns', 'runtime', 'memory'])
+
+
+#Specify the name of the input file
+inputFile = 'Transactional_T10I4D100K.csv'
+
+#specify the seperator
+seperator='\t'
+
+#Create a list of constraint values
+minimumSupportList = [500,600,700,800]
+#minimumSupport values can be specified between 0 to 1.
+#Example: minSupList = [0.005, 0.006, 0.007, 0.008, 0.009]
+
+#specify the name of the algorithm
+algorithm = 'FP-growth'  #specify the algorithm name
+
+#Run the for loop for each minSup value
+for minSup in minimumSupportList:
+    #Create the object
+    obj = alg.FPGrowth(inputFile, minSup, seperator)
+    #start the mining process
+    obj.startMine()
+    #store the results in the data frame
+    result.loc[result.shape[0]] = [algorithm, minSup, len(obj.getPatterns()), obj.getRuntime(), obj.getMemoryRSS()]
+
+#Print the dataframe
+result
+
+#Visualize the plots
+from PAMI.extras.graph import dataFrameInToFigures as dif
+#Pass the result data frame to the class
+ab = dif.dataFrameInToFigures(result)
+#Draw the graphs
+ab.plotGraphsFromDataFrame()
+</code></pre>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/temporal.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Topic 2</h4>
-                            <p>Implementing a pattern mining algorithm on a dataset at multiple constraint values.</p>
-                            <a class="fw-medium" href="executeAlgorithmAtMultipleConstraints.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/georeferencial.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Topic 3</h4>
-                            <p>Evaluation of multiple pattern mining algorithms on a dataset at multiple constraint values</p>
-                            <a class="fw-medium" href="executeVariousAlgorithmsOnDatabaseAtMultipleConstraints.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
+
     <!-- Service End -->
 
     <!-- Footer Start -->

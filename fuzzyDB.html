@@ -147,13 +147,187 @@
             </div>
             <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                 <div class="p-lg-5 pe-lg-0">
-                    Coming soon...
+                    <h1>Fuzzy database</h1>
+                        <h3>Description</h3>
+                        <p>A fuzzy database represents the data generated from a non-binary transactional or temporal database using fuzzy logic.</p>
+                        <h3 id="types">Types</h3>
+                        <ol>
+                            <li>Fuzzy transactional databases</li>
+                            <li>Fuzzy temporal databases</li>
+                        </ol>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
+                         alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                        <h1>Fuzzy transactional databases</h1>
+                        <h3>Description</h3>
+                        <p>A fuzzy transactional database represents a set of transactions, where each transaction consists of a
+                            transactional identifier (tid), items, and their fuzzy occurrences values. Please note that the fuzzy occurrence values of an item lie between 0 and 1.
+                            If the fuzzy value of an item is close zero, it implies less chance of occurrence of an item in a database.
+                            If the fuzzy value of an item is close one, it implies high chance of occurrence of an item in a database.
+                            A sample fuzzy transactional database generated from the set of items, I={Bread, Jam, Butter, Pen, Books, Bat}, is shown in below table:</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>TID</th>
+                                    <th>Transactions (items and their fuzzy values)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>(Bread.High, 0.6), (Bread.Low, 0.4), (Jam.High, 0.2), (Jam.Low, 0.8), (Butter.High, 0.8), (Butter.Low, 0.2)</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>(Bat.High, 0.5), (Bat.Low, 0.5), (Ball.High, 0.6), (Ball.Low, 0.4)</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>(Pen.High, 0.2), (Pen.Low, 0.8), (Book.High, 0.3), (Book.Low, 0.7)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4 id="format-of-a-utility-transactional-database">Format of a fuzzy transactional database</h4>
+                        <p>The fuzzy transactional database must exist in the following format:</p>
+
+                        <div class="language-plaintext highlighter-rouge">
+                            <div class="highlight">
+                                <pre class="highlight"><code>fuzzyitemA&lt;sep&gt;fuzzyitemB&lt;sep&gt;...&lt;sep&gt;fuzzyitemN:total fuzzyValue:fuzzyValueA&lt;sep&gt;fuzzyValueB&lt;sep&gt;...&lt;sep&gt;fuzzyValueN</code></pre>
+                            </div>
+                        </div>
+
+                        <p>
+                            <em>The ‘total fuzzy value’ represents the sum of fuzzy values of all items in a transaction.</em>
+                        </p>
+
+                        <h4>Rules to create a fuzzy database</h4>
+
+                        <ol>
+                            <li>
+                                The default separator, i.e.,
+                                <sep>, used in PAMI is tab space (or \t). However, the users can override the default
+                                separator with their choice. Since spatial objects, such as Point, Line, and Polygon, are represented using space
+                                and comma, usage of tab space facilitates us to effectively distinguish the spatial objects.</sep>
+                            </li>
+                            <li>Items, total utility, and individual utilities of the items within a transaction have to be seperated by the symbol ‘:’</li>
+                        </ol>
+
+                        <h4 id="an-example">An example</h4>
+
+                        <div class="language-plaintext highlighter-rouge">
+                            <div class="highlight">
+                                <pre class="highlight"><code>Bread.High    Bread.Low   Jam.High    Jam.Low     Butter.High    Butter.Low:3:0.6    0.4    0.2    0.8    0.8   0.2
+Bat.High   Bat.Low   Ball.High   Ball.Low:2:0.5    0.5    0.6    0.4
+Pen   Book:2:0.2    0.8   0.3    0.7</code></pre>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
+                         alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                        <h1>Fuzzy temporal databases</h1>
+                        <h3>Description</h3>
+                        <p>A fuzzy temporal database consists of timestamp, tid, items, and their corresponding fuzzy values.
+                        A sample fuzzy temporal database generated from the set of items, I={Bread, Jam, Butter, Pen, Books, Bat},
+                        is shown in below table:</p>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Timestamp</th>
+                                    <th>tid</th>
+                                    <th>Transactions (items and their fuzzy values)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>(Bread.High, 0.6), (Bread.Low, 0.4), (Jam.High, 0.2), (Jam.Low, 0.8), (Butter.High, 0.8), (Butter.Low, 0.2)</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>(Bat.High, 0.5), (Bat.Low, 0.5), (Ball.High, 0.6), (Ball.Low, 0.4)</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>3</td>
+                                    <td>(Pen.High, 0.2), (Pen.Low, 0.8), (Book.High, 0.3), (Book.Low, 0.7)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4 id="format-of-a-utility-temporal-database">Format of fuzzy temporal database</h4>
+                        <p>The fuzzy temporal database must exist in the following format:</p>
+
+                        <div class="language-plaintext highlighter-rouge">
+                            <div class="highlight">
+                                <pre class="highlight"><code> timestamp:fuzzyitemA&lt;sep&gt;fuzzyitemB&lt;sep&gt;...&lt;sep&gt;fuzzyitemN:total fuzzy value:fuzzyValueA&lt;sep&gt;fuzzyValueB&lt;sep&gt;...&lt;sep&gt;fuzzyValueN</code></pre>
+                            </div>
+                        </div>
+
+                        <p>
+                            <em>The ‘total fuzzy value’ represents the total fuzzy value of all items in a transaction.</em>
+                        </p>
+
+                        <h4 id="rules-to-create-a-utility-temporal-database">Rules to create a fuzzy temporal database</h4>
+                        <ol>
+                            <li>
+                                <p>
+                                    The default separator, i.e.,
+                                    <sep>, used in PAMI is tab space (or \t). However, the users can override the default
+                                       separator with their choice. Since spatial objects, such as Point, Line, and Polygon, are represented using space
+                                       and comma, usage of tab space facilitates us to effectively distinguish the spatial objects.</sep>
+                                </p>
+                            </li>
+                            <li>
+                                <p>Timestamp, items, total utility, and individual utilities of the items within a transaction have to be seperated by the symbol ‘:’</p>
+                            </li>
+                        </ol>
+
+                        <h4 id="an-example-1">An example</h4>
+
+                        <div class="language-plaintext highlighter-rouge">
+                            <div class="highlight">
+                                <pre class="highlight"><code>1:Bread   Jam     Butter:3:0.6    0.4    0.2    0.8    0.8   0.2
+2:Bat Ball:110:100   10
+5:Pen Book:7:2 5</code></pre>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--
 <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
@@ -174,7 +348,6 @@
     </div>
 </div>
 About End -->
-
 
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
