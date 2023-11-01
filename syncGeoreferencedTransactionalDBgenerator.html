@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>RAGE Uday Kiran</title>
+    <script src="jquery.js"></script>
+    <script>
+    $(function(){
+      $("#includedContent").load("top.html");
+    });
+    </script>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/github.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>The University of Aizu, Aizu-Wakamatsu, Japan</small>
+                </div>
+                <!--
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+                </div>
+                -->
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+81-8048340999</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/profile.php?id=100072145825581" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.researchgate.net/profile/Uday-Rage" target="_blank"><i class="fa fa-graduation-cap"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.linkedin.com/in/uday-kiran-rage-715aa3179/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.researchgate.net/profile/Uday-Rage" target="_blank"><i class="fas fa-edit"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary">PAMI</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="people.html" class="nav-item nav-link">People</a>
+                <a href="installation.html" class="nav-item nav-link">Maintenance</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User's Manual</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="structure.html" class="dropdown-item">Structure of PAMI</a>
+                        <a href="dataPreparation.html" class="dropdown-item">Data preparation</a>
+                        <a href="df2db.html" class="dropdown-item">DataFrame2Database</a>
+                        <a href="syntheticDataGenerator.html" class="dropdown-item">Synthetic data generators</a>
+                        <a href="algoImplementation.html" class="dropdown-item">Algorithm implementation</a>
+                        <a href="visualization.html" class="dropdown-item">Visualization</a>
+                        <a href="latexFigures.html" class="dropdown-item">Latex figures</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Developer's Manual</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="structure.html" class="dropdown-item">Structure of PAMI</a>
+                        <a href="executingAlgorithms.html" class="dropdown-item">Fork, Sync, Push, and Pull request</a>
+                        <a href="casing.html" class="dropdown-item">Code casing</a>
+                        <a href="documentation.html" class="dropdown-item">Documentation</a>
+                        <a href="abc.html" class="dropdown-item">Abstract Base Class</a>
+                        <a href="codingAlgo.html" class="dropdown-item">Coding an Algorithm</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tutorials</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="vscode.html" class="dropdown-item">VS Code</a>
+                        <a href="pycharm.html" class="dropdown-item">PyCharm</a>
+                        <a href="notebooks.html" class="dropdown-item">Jupyter Notebooks</a>
+                        <a href="colab.html" class="dropdown-item">Google Colab</a>
+                        <a href="others.html" class="dropdown-item">Others</a>
+                    </div>
+                </div>
+            <a href="issuesFeedback.html" class="nav-item nav-link">Issues</a>
+            </div>
+            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Datasets<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- About Start -->
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;"><br />
+                <div class="position-relative h-100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img class="position-absolute img-fluid w-50" src="img/utility.jpg" style="object-fit: cover;"
+                         alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+
+                    <h1>Synthetic Geo-referenced database generator</h1>
+                    <br />
+
+                    This page describes the process to generate the following databases:
+                    <ol>
+                        <li>Geo-referenced transactional database</li>
+                        <li>Geo-referenced temporal database</li>
+                        <li>Geo-referenced utility database</li>
+                        <li>Geo-referenced uncertain transactional database</li>
+                        <li>Geo-referenced uncertain temporal database</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Start -->
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <div class="position-relative h-100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img class="position-absolute img-fluid w-75" src="img/utility.jpg" style="object-fit: cover;"
+                         alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+
+                    <h1>Synthetic Geo-referenced transactional database generator</h1>
+
+                     The code to generate geo-referenced transactional database is as follows:
+
+                    <div class="highlight">
+                    <pre class="highlight"><code>#import the algorithm<br />from PAMI.extras.syntheticDataGenerator import georeferencedTransactionalDatabase as gtdb
+
+#specify the parameters
+databaseSize = 100000
+numberOfItems = 2000
+averageLengthOfTransaction = 10
+
+#bounding box
+minimumXvalue = 0
+minimumYvalue = 0
+maximumXvalue = 100
+maximumYvalue = 100
+#The above four lines ensure that the spatial information of every item in the database lie within (0, 0) and (100, 100).
+
+#initialize the algorithm
+alg = gtdb.georeferencedTransactionalDatabase(databaseSize, numberOfItems, averageLengthOfTransaction)
+
+#execute the algorithm
+alg.generate()
+
+#save the generated data in a file
+alg.save(fileName)
+alg.saveLocationData(fileName2)
+
+#Get the generated data as a dataframe (Optional feature)
+dataFrame = alg.getData()
+locationDataFrame = alg.getLocationData()
+</code></pre>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<!-- About Start -->
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <div class="position-relative h-100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img class="position-absolute img-fluid w-75" src="img/utility.jpg" style="object-fit: cover;"
+                         alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+
+                    <h1>Synthetic Geo-referenced temporal database generator</h1>
+
+                     The code to generate a geo-referenced temporal database is as follows:
+                    <div class="highlight">
+                    <pre class="highlight"><code>#import the algorithm<br />from PAMI.extras.syntheticDataGenerator import georeferencedTemporalDatabase as gtempdb
+
+#specify the parameters
+databaseSize = 100000
+numberOfItems = 2000
+averageLengthOfTransaction = 10
+
+probabilityToMissNextTimestamp = 0
+#  0 (or 0%)     - regular temporal database with uniform time gap between the transactions
+# <1 (or <100%)  - irregular temporal database with non-uniform time gaps between the transactions
+
+probabilityOfRecurrenceOfTimestampInNextTransaction = 20
+# 0 (or 0%)  - every transaction will have a different timestamp
+# 1 (or 100%) - every transaction will have the same timestamp
+
+
+#bounding box
+minimumXvalue = 0
+minimumYvalue = 0
+maximumXvalue = 100
+maximumYvalue = 100
+#The above four lines ensure that the spatial information of every item in the database lie within (0, 0) and (100, 100).
+
+
+#initialize the algorithm
+alg = gtempdb.georeferencedTemporalDatabase(databaseSize, numberOfItems, \
+                        averageLengthOfTransaction, \
+                        probabilityToMissNextTimestamp,\
+                        probabilityToMissNextTimestamp, \
+                        minimumXvalue, minimumYvalue,\
+                        maximumXvalue,maximumYvalue)
+
+#execute the algorithm
+alg.generate()
+
+#save the generated data in a file
+alg.save(fileName)
+alg.saveLocationData(fileName2) #optional
+
+#Get the generated data as a dataframe (Optional features)
+dataFrame = alg.getData()
+locationDataFrame = alg.getLocationData()
+</code></pre>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+    <!-- About Start -->
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <div class="position-relative h-100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img class="position-absolute img-fluid w-75" src="img/utility.jpg" style="object-fit: cover;"
+                         alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+
+                    <h1>Synthetic Geo-referenced utility database generator</h1>
+
+                     The code to generate a geo-referenced utility database is as follows:
+                    <div class="highlight">
+                    <pre class="highlight"><code>#import the algorithm<br />from PAMI.extras.syntheticDataGenerator import georeferencedUtilityDatabase as gudb
+
+#specify the parameters
+databaseSize = 100000
+numberOfItems = 2000
+averageLengthOfTransaction = 10
+
+minimumInternalUtilityValue = 1
+maximumInternalUtilityValue = 100
+
+minimumExternalUtilityValue = 1
+maximumExternalUtilityValue = 10
+
+
+#initialize the algorithm
+alg = udb.utilityDatabase(databaseSize, numberOfItems, \
+                        averageLengthOfTransaction,\
+                        minimumInternalUtilityValue,\
+                        maximumInternalUtilityValue,\
+                        minimumExternalUtilityValue,\
+                        maximumExternalUtilityValue)
+
+#execute the algorithm
+alg.generate()
+
+#save the generated data in a file
+alg.save(fileName1)
+alg.saveItemsInternalUtilityValues(fileName2)
+alg.saveItemsExternalUtilityValues(fileName3)
+
+#Get the generated data as a dataframe (Optional feature)
+utilityDF = alg.getUtilityData()
+internalUDF = alg.getInternalUtilityData()
+externalUDF = alg.getExternalUtilityData()
+</code></pre>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<!--
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
+                         alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                        WRITE YOUR TEXT HERE
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+About End -->
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">PAMI: PAttern MIning</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+</body>
+
+</html>
