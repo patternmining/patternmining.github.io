@@ -4,12 +4,6 @@
 <head>
     <meta charset="utf-8">
     <title>RAGE Uday Kiran</title>
-    <script src="jquery.js"></script>
-    <script>
-    $(function(){
-      $("#includedContent").load("top.html");
-    });
-    </script>
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -19,14 +13,16 @@
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+          rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/3e4f3126d9.js"></script>
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -42,119 +38,155 @@
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+<!-- Spinner Start -->
+<div class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+     id="spinner">
+    <div class="spinner-grow text-primary" role="status" style="width: 3rem; height: 3rem;">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<!-- Spinner End -->
+
+
+<!-- Topbar Start -->
+<div class="container-fluid bg-light p-0">
+    <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                <small>The University of Aizu, Aizu-Wakamatsu, Japan</small>
+            </div>
+            <!--
+            <div class="h-100 d-inline-flex align-items-center py-3">
+                <small class="far fa-clock text-primary me-2"></small>
+                <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+            </div>
+            -->
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-phone-alt text-primary me-2"></small>
+                <small><a href="tel:818048340999">+81-8048340999</a></small>
+            </div>
+            <div class="h-100 d-inline-flex align-items-center">
+                <a class="btn btn-sm-square bg-white text-primary me-0" href="https://u-aizu.ac.jp/~udayrage/"
+                   target="_blank"><i class="fa-solid fa-building-columns"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1"
+                   href="https://www.linkedin.com/in/uday-kiran-rage-715aa3179/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1"
+                   href="https://www.researchgate.net/profile/Uday-Rage" target="_blank"><i
+                        class="fa-brands fa-researchgate"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1"
+                   href="https://scholar.google.com/citations?user=jjFBiNMAAAAJ&hl=en&oi=ao" target="_blank"><i
+                        class="fa fa-graduation-cap"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-0"
+                   href="https://orcid.org/0000-0002-5417-0289" target="_blank"><i
+                        class="fa-brands fa-orcid"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-0"
+                   href="https://www.scopus.com/authid/detail.uri?authorId=57200830513" target="_blank"><i
+                        class="fa-solid fa-s"></i></a>
+                <!-- <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/profile.php?id=100072145825581" target="_blank"><i class="fab fa-facebook-f"></i></a> -->
+                <a class="btn btn-sm-square bg-white text-primary me-0" href="https://github.com/UdayLab/PAMI"
+                   target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
         </div>
     </div>
-    <!-- Spinner End -->
+</div>
+<!-- Topbar End -->
 
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-light p-0">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>The University of Aizu, Aizu-Wakamatsu, Japan</small>
-                </div>
-                <!--
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock text-primary me-2"></small>
-                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
-                </div>
-                -->
-            </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+81-8048340999</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/profile.php?id=100072145825581" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.researchgate.net/profile/Uday-Rage" target="_blank"><i class="fa fa-graduation-cap"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.linkedin.com/in/uday-kiran-rage-715aa3179/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.researchgate.net/profile/Uday-Rage" target="_blank"><i class="fas fa-edit"></i></a>
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <a class="navbar-brand d-flex align-items-center px-4 px-lg-5" href="index.html">
+        <h2 class="m-0 text-primary">PAMI</h2>
+    </a>
+    <button class="navbar-toggler me-4" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a class="nav-item nav-link active" href="index.html">Home</a>
+            <a class="nav-item nav-link" href="people.html">People</a>
+            <a class="nav-item nav-link" href="installation.html">Maintenance</a>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">User's Manual</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a class="dropdown-item" href="structure.html">Structure of PAMI</a>
+                    <a class="dropdown-item" href="dataPreparation.html">Data preparation</a>
+                    <a class="dropdown-item" href="df2db.html">DataFrame2Database</a>
+                    <a class="dropdown-item" href="syntheticDataGenerator.html">Synthetic data generators</a>
+                    <a class="dropdown-item" href="algoImplementation.html">Algorithm implementation</a>
+                    <a class="dropdown-item" href="visualization.html">Visualization</a>
+                    <a class="dropdown-item" href="latexFigures.html">Latex figures</a>
                 </div>
             </div>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Developer's Manual</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a class="dropdown-item" href="structure.html">Structure of PAMI</a>
+                    <a class="dropdown-item" href="executingAlgorithms.html">Fork, Sync, Push, and Pull request</a>
+                    <a class="dropdown-item" href="casing.html">Code casing</a>
+                    <a class="dropdown-item" href="documentation.html">Documentation</a>
+                    <a class="dropdown-item" href="abc.html">Abstract Base Class</a>
+                    <a class="dropdown-item" href="codingAlgo.html">Coding an Algorithm</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Tutorials</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a class="dropdown-item" href="vscode.html">VS Code</a>
+                    <a class="dropdown-item" href="pycharm.html">PyCharm</a>
+                    <a class="dropdown-item" href="notebooks.html">Jupyter Notebooks</a>
+                    <a class="dropdown-item" href="colab.html">Google Colab</a>
+                    <a class="dropdown-item" href="others.html">Others</a>
+                </div>
+            </div>
+            <a class="nav-item nav-link" href="https://github.com/orgs/UdayLab/discussions"
+               target="_blank">Discussions</a>
+            <a class="nav-item nav-link" href="https://github.com/UdayLab/PAMI/issues" target="_blank">Issues</a>
         </div>
+        <a class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" href="datasets.html">Datasets<i
+                class="fa fa-arrow-right ms-3"></i></a>
     </div>
-    <!-- Topbar End -->
+</nav>
+<!-- Navbar End -->
 
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary">PAMI</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="people.html" class="nav-item nav-link">People</a>
-                <a href="installation.html" class="nav-item nav-link">Maintenance</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User's Manual</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="structure.html" class="dropdown-item">Structure of PAMI</a>
-                        <a href="dataPreparation.html" class="dropdown-item">Data preparation</a>
-                        <a href="df2db.html" class="dropdown-item">DataFrame2Database</a>
-                        <a href="syntheticDataGenerator.html" class="dropdown-item">Synthetic data generators</a>
-                        <a href="algoImplementation.html" class="dropdown-item">Algorithm implementation</a>
-                        <a href="visualization.html" class="dropdown-item">Visualization</a>
-                        <a href="latexFigures.html" class="dropdown-item">Latex figures</a>
-                    </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Developer's Manual</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="structure.html" class="dropdown-item">Structure of PAMI</a>
-                        <a href="executingAlgorithms.html" class="dropdown-item">Fork, Sync, Push, and Pull request</a>
-                        <a href="casing.html" class="dropdown-item">Code casing</a>
-                        <a href="documentation.html" class="dropdown-item">Documentation</a>
-                        <a href="abc.html" class="dropdown-item">Abstract Base Class</a>
-                        <a href="codingAlgo.html" class="dropdown-item">Coding an Algorithm</a>
-                    </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tutorials</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="vscode.html" class="dropdown-item">VS Code</a>
-                        <a href="pycharm.html" class="dropdown-item">PyCharm</a>
-                        <a href="notebooks.html" class="dropdown-item">Jupyter Notebooks</a>
-                        <a href="colab.html" class="dropdown-item">Google Colab</a>
-                        <a href="others.html" class="dropdown-item">Others</a>
-                    </div>
-                </div>
-            <a href="issuesFeedback.html" class="nav-item nav-link">Issues</a>
-            </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Datasets<i class="fa fa-arrow-right ms-3"></i></a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
+<!-- About Start -->
 <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
     <div class="container about px-lg-0">
         <div class="row g-0 mx-lg-0">
             <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
-                         alt="">
+                    <img alt="" class="position-absolute img-fluid w-100 h-100"
+                         src="img/utility.jpg"
+                         style="object-fit: cover;">
                 </div>
             </div>
             <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                 <div class="p-lg-5 pe-lg-0">
                     <h1>Utility database</h1>
-                        <h3>Description</h3>
-                        <p>A utility database is a non-binary transactional or temporal database.</p>
-                        <h3 id="types">Types</h3>
-                        <ol>
-                            <li>Utility transactional databases</li>
-                            <li>Utility temporal databases</li>
-                        </ol>
+                    <h3>Description</h3>
+                    <p>A transactional/temporal database represents a binary database. It is because the items in these
+                        databases have values either 1 or 0.
+                        In contrast, a utility database is a non-binary database. In fact, a utility database is a
+                        quantitative database containing items and their utility values.</p>
+
+                    <p>Utility databases are naturally produced by the real-world applications. Henceforth, most forms
+                        of the databases, such as transactional and temporal databases, are generated from utility
+                        databases.</p>
+
+                    <p>In the utility database, the items have <b>external utility values</b> and <b>internal utility
+                        values</b>. External utility values, like prices of items in a supermarket, do not vary in the
+                        entire data. Internal utility values, like the number of items purchased by each customer, vary
+                        for every transaction in the database. The <b>utility</b> of an item in a transaction represents
+                        the product of its internal and external utility values.
+                    </p>
+                    <h3 id="types">Types</h3>
+                    <ol>
+                        <li>Utility transactional databases</li>
+                        <li>Utility temporal databases</li>
+                    </ol>
                 </div>
             </div>
         </div>
@@ -166,75 +198,82 @@
         <div class="row g-0 mx-lg-0">
             <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
-                         alt="">
+                    <!--<img alt="" class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg"
+                         style="object-fit: cover;"> -->
                 </div>
             </div>
             <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                 <div class="p-lg-5 pe-lg-0">
-                        <h1>Utility transactional databases</h1>
-                        <h3>Description</h3>
-                        <p>A utility transactional database consists of a transactional identifier (tid), items, and their corresponding utility values in a transaction.
-                        A sample utility transactional database generated from the set of items, I={Bread, Jam, Butter, Pen, Books, Bat},
+                    <h1>Utility transactional databases</h1>
+                    <h3>Description</h3>
+                    <p>A utility transactional database consists of a transactional identifier (tid), items, and their
+                        corresponding utility values in a transaction.
+                        A sample utility transactional database generated from the set of items, I={Bread, Jam, Butter,
+                        Pen, Books, Bat},
                         is shown in below table:</p>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>TID</th>
-                                    <th>Transactions (items and their prices)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>(Bread,1$), (Jam,2$), (Butter, 1.5$)</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>(Bat, 100$), (Ball, 10$)</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>(Pen, 2$), (Book, 5$)</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>TID</th>
+                            <th>Transactions (items and their prices)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>(Bread,1$), (Jam,2$), (Butter, 1.5$)</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>(Bat, 100$), (Ball, 10$)</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>(Pen, 2$), (Book, 5$)</td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-                        <h4 id="format-of-a-utility-transactional-database">Format of a utility transactional database</h4>
-                        <p>The utility transactional database must exist in the following format:</p>
+                    <h4 id="format-of-a-utility-transactional-database">Format of a utility transactional database</h4>
+                    <p>The utility transactional database must exist in the following format:</p>
 
-                        <div class="language-plaintext highlighter-rouge">
-                            <div class="highlight">
-                                <pre class="highlight"><code> itemA&lt;seo&gt;itemB&lt;sep&gt;...&lt;sep&gt;itemN:total utility:utilityA&lt;sep&gt;utilityB&lt;sep&gt;...&lt;sep&gt;utilityN</code></pre>
-                            </div>
+                    <div class="language-plaintext highlighter-rouge">
+                        <div class="highlight">
+                            <pre class="highlight"><code> itemA&lt;seo&gt;itemB&lt;sep&gt;...&lt;sep&gt;itemN:total utility:utilityA&lt;sep&gt;utilityB&lt;sep&gt;...&lt;sep&gt;utilityN</code></pre>
                         </div>
+                    </div>
 
-                        <p>
-                            <em>The ‘total utility’ represents the total utility value of items in a transaction.</em>
-                        </p>
+                    <p>
+                        <em>The ‘total utility’ represents the total utility value of items in a transaction.</em>
+                    </p>
 
-                        <h4 id="rules-to-create-a-utility-transactional-database">Rules to create a utility transactional database</h4>
+                    <h4 id="rules-to-create-a-utility-transactional-database">Rules to create a utility transactional
+                        database</h4>
 
-                        <ol>
-                            <li>
-                                The default separator, i.e.,
-                                <sep>, used in PAMI is tab space (or \t). However, the users can override the default
-                                separator with their choice. Since spatial objects, such as Point, Line, and Polygon, are represented using space
-                                and comma, usage of tab space facilitates us to effectively distinguish the spatial objects.</sep>
-                            </li>
-                            <li>Items, total utility, and individual utilities of the items within a transaction have to be seperated by the symbol ‘:’</li>
-                        </ol>
+                    <ol>
+                        <li>
+                            The default separator, i.e.,
+                            <sep>, used in PAMI is tab space (or \t). However, the users can override the default
+                                separator with their choice. Since spatial objects, such as Point, Line, and Polygon,
+                                are represented using space
+                                and comma, usage of tab space facilitates us to effectively distinguish the spatial
+                                objects.
+                            </sep>
+                        </li>
+                        <li>Items, total utility, and individual utilities of the items within a transaction have to be
+                            seperated by the symbol ‘:’
+                        </li>
+                    </ol>
 
-                        <h4 id="an-example">An example</h4>
+                    <h4 id="an-example">An example</h4>
 
-                        <div class="language-plaintext highlighter-rouge">
-                            <div class="highlight">
+                    <div class="language-plaintext highlighter-rouge">
+                        <div class="highlight">
                                 <pre class="highlight"><code>Bread   Jam     Butter:4.5:1    2   1.5
 Bat   Ball:110:100   10
-Pen   Book:7:2   5
-                                </code></pre>
-                            </div>
+Pen   Book:7:2   5</code></pre>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -246,107 +285,95 @@ Pen   Book:7:2   5
         <div class="row g-0 mx-lg-0">
             <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
-                         alt="">
+                     <!--<img alt="" class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg"
+                         style="object-fit: cover;"> -->
                 </div>
             </div>
             <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                 <div class="p-lg-5 pe-lg-0">
-                        <h1>Utility temporal databases</h1>
-                        <h3>Description</h3>
-                        <p>A utility temporal database consists of timestamp, tid, items, and their corresponding utility values.
-                        A sample utility temporal database generated from the set of items, I={Bread, Jam, Butter, Pen, Books, Bat},
+                    <h1>Utility temporal databases</h1>
+                    <h3>Description</h3>
+                    <p>A utility temporal database consists of timestamp, tid, items, and their corresponding utility
+                        values.
+                        A sample utility temporal database generated from the set of items, I={Bread, Jam, Butter, Pen,
+                        Books, Bat},
                         is shown in below table:</p>
 
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Timestamp</th>
-                                    <th>tid</th>
-                                    <th>Transactions (items and their prices)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>(Bread,1$), (Jam,2$), (Butter, 1.5$)</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>2</td>
-                                    <td>(Bat, 100$), (Ball, 10$)</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>3</td>
-                                    <td>(Pen, 2$), (Book, 5$)</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>tid</th>
+                            <th>Transactions (items and their prices)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>(Bread,1$), (Jam,2$), (Butter, 1.5$)</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>(Bat, 100$), (Ball, 10$)</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>(Pen, 2$), (Book, 5$)</td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-                        <h4 id="format-of-a-utility-temporal-database">Format of a utility temporal database</h4>
-                        <p>The utility temporal database must exist in the following format:</p>
+                    <h4 id="format-of-a-utility-temporal-database">Format of a utility temporal database</h4>
+                    <p>The utility temporal database must exist in the following format:</p>
 
-                        <div class="language-plaintext highlighter-rouge">
-                            <div class="highlight">
-                                <pre class="highlight"><code> timestamp:itemA&lt;seo&gt;itemB&lt;sep&gt;...&lt;sep&gt;itemN:total utility:utilityA&lt;sep&gt;utilityB&lt;sep&gt;...&lt;sep&gt;utilityN</code></pre>
-                            </div>
+                    <div class="language-plaintext highlighter-rouge">
+                        <div class="highlight">
+                            <pre class="highlight"><code> timestamp:itemA&lt;seo&gt;itemB&lt;sep&gt;...&lt;sep&gt;itemN:total utility:utilityA&lt;sep&gt;utilityB&lt;sep&gt;...&lt;sep&gt;utilityN</code></pre>
                         </div>
+                    </div>
 
-                        <p>
-                            <em>The ‘total utility’ represents the total utility value of items in a transaction.</em>
-                        </p>
+                    <p>
+                        <em>The ‘total utility’ represents the total utility value of items in a transaction.</em>
+                    </p>
 
-                        <h4 id="rules-to-create-a-utility-temporal-database">Rules to create a utility temporal database</h4>
-                        <ol>
-                            <li>
-                                <p>
-                                    The default separator, i.e.,
-                                    <sep>, used in PAMI is tab space (or \t). However, the users can override the default
-                                       separator with their choice. Since spatial objects, such as Point, Line, and Polygon, are represented using space
-                                       and comma, usage of tab space facilitates us to effectively distinguish the spatial objects.</sep>
-                                </p>
-                            </li>
-                            <li>
-                                <p>Timestamp, items, total utility, and individual utilities of the items within a transaction have to be seperated by the symbol ‘:’</p>
-                            </li>
-                        </ol>
+                    <h4 id="rules-to-create-a-utility-temporal-database">Rules to create a utility temporal
+                        database</h4>
+                    <ol>
+                        <li>
+                            <p>
+                                The default separator, i.e.,
+                                <sep>, used in PAMI is tab space (or \t). However, the users can override the default
+                                    separator with their choice. Since spatial objects, such as Point, Line, and
+                                    Polygon, are represented using space
+                                    and comma, usage of tab space facilitates us to effectively distinguish the spatial
+                                    objects.
+                                </sep>
+                            </p>
+                        </li>
+                        <li>
+                            <p>Timestamp, items, total utility, and individual utilities of the items within a
+                                transaction have to be seperated by the symbol ‘:’</p>
+                        </li>
+                    </ol>
 
-                        <h4 id="an-example-1">An example</h4>
+                    <h4 id="an-example-1">An example</h4>
 
-                        <div class="language-plaintext highlighter-rouge">
-                            <div class="highlight">
+                    <div class="language-plaintext highlighter-rouge">
+                        <div class="highlight">
                                 <pre class="highlight"><code>1:Bread   Jam     Butter:4.5:1    2   1.5
 2:Bat Ball:110:100   10
 5:Pen Book:7:2 5</code></pre>
-                            </div>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<!--
-<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-    <div class="container about px-lg-0">
-        <div class="row g-0 mx-lg-0">
-            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
-                <div class="position-relative h-100">
-                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
-                         alt="">
-                </div>
-            </div>
-            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                <div class="p-lg-5 pe-lg-0">
-                        WRITE YOUR TEXT HERE
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-About End -->
+<!-- About End -->
 
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -368,7 +395,7 @@ About End -->
 
 
 <!-- Back to Top -->
-<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+<a class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top" href="#"><i class="bi bi-arrow-up"></i></a>
 
 
 <!-- JavaScript Libraries -->

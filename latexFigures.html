@@ -4,12 +4,6 @@
 <head>
     <meta charset="utf-8">
     <title>RAGE Uday Kiran</title>
-    <script src="jquery.js"></script>
-    <script>
-    $(function(){
-      $("#includedContent").load("top.html");
-    });
-    </script>
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -136,169 +130,138 @@
     </nav>
     <!-- Navbar End -->
 
-
-<!-- About Start -->
-<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-    <div class="container about px-lg-0">
-        <div class="row g-0 mx-lg-0">
-            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
-                <div class="position-relative h-100">
-                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
-                         alt="">
+ <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container about px-lg-0">
+                <center><h1 class="display-5 mb-5">Creating Latex files for the generated results</h1></center>
+                <div class="service-item">
+                    <p>This page describes the step-by-step process to create latex files for a data frame.</p>
                 </div>
-            </div>
-            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                <div class="p-lg-5 pe-lg-0">
-                    <div class="section-title text-start">
-                        <h1 class="display-5 mb-4">Temporal database</h1>
-                    </div>
-                    <h3 id="description">Description</h3>
-                    <p>A temporal database is a collection of transactions ordered by their timestamp. A sample temporal
-                        database generated from the set of items, I={a,b,c,d,e,f}, is shown in below table:</p>
 
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>TID</th>
-                            <th>Timestamp</th>
-                            <th>Transactions</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>a, b, c</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>d, e</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>a, e, f</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>7</td>
-                            <td>d, f, g</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <h4>Step 1: Creation of pandas data frame to store the results of multiple algorithms</h4>
 
-                    <h3 id="rules-to-create-a-temporal-database">Rules to create a temporal database</h3>
+<pre class="highlight"><code class="language-Python">import pandas as pd
+result = pd.DataFrame(columns=['algorithm', 'minSup', 'patterns', 'runtime', 'memory'])
+</code></pre>
+            <p><strong>Note:</strong> The first column of data frame has to be ‘algorithm.’  Otherwise, the code will generate the error.</p>
 
-                    <ol>
-                        <li>Since TID of a transaction implicitly represents the row number, this information can be
-                            ignored to save space.
-                        </li>
-                        <li>The first column in the database must represent a timestamp.</li>
-                        <li>
-                            The timestamp of the first transaction must always start from 1. The timestamps of remaining
-                            transactions follow thereafter.
-                            <strong>In other words, the timestamps in a temporal database must be relative to each
-                                other, rather than being absolute timestamps.</strong>
-                        </li>
-                        <li>Irregular time gaps can exist between the transactions.</li>
-                        <li>Multiple transactions can have a same timestamp. In other words, multiple transactions can
-                            occur at a particular timestamp. (Please note that some pattern mining algorithms,
-                            especially variants of ECLAT, may not work properly if multiple transactions share a common
-                            timestamp.)
-                        </li>
-                        <li>All items in a transaction must be seperated with a separator.</li>
-                        <li>The items in a temporal database can be integers or strings.</li>
-                        <li>
-                            ‘
-                            <em>Tab space</em>
-                            ’ is the default seperator. However, temporal databases can be constructed using other
-                            seperators, such as comma and space.
-                        </li>
-                    </ol>
+<h4>Step 2: Declaring the name of the dataset</h4>
 
-                    <h3 id="format-of-a-temporal-database">Format of a temporal database</h3>
+<pre class="highlight"><code class="language-Python">#inputFile = 'fileName'
+inputFile = 'Transactional_T10I4D100K.csv'
+</code></pre>
 
-                    <div class="language-plaintext highlighter-rouge">
-                        <div class="highlight">
-                            <pre class="highlight"><code>timestamp&lt;sep&gt;item1&lt;sep&gt;item2&lt;sep&gt;...&lt;sep&gt;itemN</code></pre>
-                        </div>
-                    </div>
+<p><a href="https://u-aizu.ac.jp/~udayrage/datasets/transactionalDatabases/Transactional_T10I4D100K.csv">Click here to download the dataset.</a></p>
 
-                    <h3 id="an-example">An example</h3>
-                    <div class="language-plaintext highlighter-rouge">
-                        <div class="highlight">
-                            <pre class="highlight">
-                                <code>1   a   b   c
-                                2   d   e
-                                4   a   e   f
-                                7   d   f   g</code>
-                            </pre>
-                        </div>
-                    </div>
+<h4>Step 3: Specify the range of values for an input parameter</h4>
+
+<pre class="highlight"><code class="language-Python">#constraintList = [array of values]
+minSupList = [400,500,600,700,800,900,1000]
+</code></pre>
+
+<h4>Step 4: Declare the algorithm name, import and execute it, and store the results in the data frame</h4>
+
+<pre class="highlight"><code class="language-Python">#algorithmName = 'name of the algorithm'
+algorithmName = 'Apriori'
+
+#import the mining algorithm
+from PAMI.frequentPattern.basic import Apriori as alg
+
+# execute the mining algorithm at different constraint values using the for loop
+#for constraint in constraintList:
+for minSup in minSupList:
+    #create an object of the mining algorithm
+    obj = alg.Apriori(inputFile,minSup, sep='\t')
+
+    #start the mining process
+    obj.startMine()
+
+    #append the results into the data frame
+    result.loc[result.shape[0]] = [algorithmName, minSup, len(obj.getPatterns()), obj.getRuntime(), obj.getMemoryRSS()]
+</code></pre>
+
+<h4>Step 5: Repeat Step-4 for each other pattern mining algorithms</h4>
+
+<pre class="highlight"><code class="language-Python">#algorithmName = 'name of the algorithm'
+algorithmName = 'FPGrowth'
+
+#import the mining algorithm
+from PAMI.frequentPattern.basic import FPGrowth as alg
+
+# execute the mining algorithm at different constraint values using the for loop
+#for constraint in constraintList:
+for minSup in minSupList:
+    #create an object of the mining algorithm
+    obj = alg.FPGrowth(inputFile,minSup, sep='\t')
+
+    #start the mining process
+    obj.startMine()
+
+    #append the results into the data frame
+    result.loc[result.shape[0]] = [algorithmName, minSup, len(obj.getPatterns()), obj.getRuntime(), obj.getMemoryRSS()]
+
+#---------------------------------
+#Repeating above steps for another algorithm
+
+#algorithmName = 'name of the algorithm'
+algorithmName = 'ECLAT'
+
+#import the mining algorithm
+from PAMI.frequentPattern.basic import ECLAT as alg
+
+# execute the mining algorithm at different constraint values using the for loop
+#for constraint in constraintList:
+for minSup in minSupList:
+    #create an object of the mining algorithm
+    obj = alg.ECLAT(inputFile,minSup, sep='\t')
+
+    #start the mining process
+    obj.startMine()
+
+    #append the results into the data frame
+    result.loc[result.shape[0]] = [algorithmName, minSup, len(obj.getPatterns()), obj.getRuntime(), obj.getMemoryRSS()]
+</code></pre>
+<h4>Step 6: Visualizing the comparative results</h4>
+
+<pre class="highlight"><code class="language-Python">#Import the library
+from PAMI.extras.graph import dataFrameInToFigures as dif
+    #Pass the result data frame to the class
+    ab = dif.dataFrameInToFigures(result)
+    #Draw the graphs
+    ab.plotGraphsFromDataFrame()
+</code></pre>
+
+<h4>Step 7: Creating Latex files for graphs</h4>
+
+<pre class="highlight"><code class="language-Python">#Import the library
+from PAMI.extras.graph import generateLatexFileFromDataFrame as gdf
+    #Pass the result data frame
+    gdf.generateLatexCode(result)
+</code></pre>
+<p><strong>Note:</strong> The <em>generateLatexCode</em> program create three latex files, namely <em>patternsLatexfile.tex</em>, <em>memoryLatexfile.tex</em>, and <em>runtimeLatexfile.tex</em>.</p>
                 </div>
-            </div>
         </div>
     </div>
-</div>
-<!-- About End -->
 
-<!--
-<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-    <div class="container about px-lg-0">
-        <div class="row g-0 mx-lg-0">
-            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
-                <div class="position-relative h-100">
-                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
-                         alt="">
-                </div>
-            </div>
-            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                <div class="p-lg-5 pe-lg-0">
-                        WRITE YOUR TEXT HERE
-                </div>
-            </div>
         </div>
-    </div>
-</div>
-About End -->
+ </div>
 
-<!-- Footer Start -->
-<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container">
-        <div class="copyright">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">PAMI: PAttern MIning</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-<!-- Back to Top -->
-<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="lib/isotope/isotope.pkgd.min.js"></script>
-<script src="lib/lightbox/js/lightbox.min.js"></script>
-
-<!-- Template Javascript -->
-<script src="js/main.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

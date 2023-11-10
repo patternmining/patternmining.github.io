@@ -15,12 +15,14 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+          rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3e4f3126d9.js" crossorigin="anonymous"></script>
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -36,257 +38,279 @@
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+<!-- Spinner Start -->
+<div id="spinner"
+     class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
     </div>
-    <!-- Spinner End -->
+</div>
+<!-- Spinner End -->
 
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-light p-0">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>The University of Aizu, Aizu-Wakamatsu, Japan</small>
-                </div>
-                <!--
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock text-primary me-2"></small>
-                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
-                </div>
-                -->
+<!-- Topbar Start -->
+<div class="container-fluid bg-light p-0">
+    <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                <small>The University of Aizu, Aizu-Wakamatsu, Japan</small>
             </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+81-8048340999</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/profile.php?id=100072145825581" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.linkedin.com/in/uday-kiran-rage-715aa3179/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.researchgate.net/profile/Uday-Rage" target="_blank"><i class="fas fa-edit"></i></a>
-                </div>
+            <!--
+            <div class="h-100 d-inline-flex align-items-center py-3">
+                <small class="far fa-clock text-primary me-2"></small>
+                <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
             </div>
+            -->
         </div>
-    </div>
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary">PAMI</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="people.html" class="nav-item nav-link">People</a>
-                <a href="installation.html" class="nav-item nav-link">Maintenance</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User's Manual</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="structure.html" class="dropdown-item">Structure of PAMI</a>
-                        <a href="dataPreparation.html" class="dropdown-item">Data preparation</a>
-                        <a href="df2db.html" class="dropdown-item">DataFrame2Database</a>
-                        <a href="syntheticDataGenerator.html" class="dropdown-item">Synthetic data generators</a>
-                        <a href="algoImplementation.html" class="dropdown-item">Algorithm implementation</a>
-                        <a href="visualization.html" class="dropdown-item">Visualization</a>
-                        <a href="latexFigures.html" class="dropdown-item">Latex figures</a>
-                    </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Developer's Manual</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="structure.html" class="dropdown-item">Structure of PAMI</a>
-                        <a href="executingAlgorithms.html" class="dropdown-item">Fork, Sync, Push, and Pull request</a>
-                        <a href="casing.html" class="dropdown-item">Code casing</a>
-                        <a href="documentation.html" class="dropdown-item">Documentation</a>
-                        <a href="abc.html" class="dropdown-item">Abstract Base Class</a>
-                        <a href="codingAlgo.html" class="dropdown-item">Coding an Algorithm</a>
-                    </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tutorials</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="vscode.html" class="dropdown-item">VS Code</a>
-                        <a href="pycharm.html" class="dropdown-item">PyCharm</a>
-                        <a href="notebooks.html" class="dropdown-item">Jupyter Notebooks</a>
-                        <a href="colab.html" class="dropdown-item">Google Colab</a>
-                        <a href="others.html" class="dropdown-item">Others</a>
-                    </div>
-                </div>
-            <a href="issuesFeedback.html" class="nav-item nav-link">Issues</a>
+        <div class="col-lg-5 px-5 text-end">
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-phone-alt text-primary me-2"></small>
+                <small><a href="tel:818048340999">+81-8048340999</a></small>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Datasets<i class="fa fa-arrow-right ms-3"></i></a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Choose the Database</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/transactional.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Transactional databases</h4>
-                            <p>Each transaction contains items seperated with a seperator.</p>
-                            <a class="fw-medium" href="transactionalDB.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/temporal.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Temporal databases</h4>
-                            <p>Transactions contain timestamp and items seperated by a seperator.</p>
-                            <a class="fw-medium" href="temporalDB.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/georeferencial.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Geo-referenced databases</h4>
-                            <p>Transactions contain static spatial items, such as Pixel, Point, Line, and Polygon.</p>
-                            <a class="fw-medium" href="georeferencedDB.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/utility.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Utility databases</h4>
-                            <p>Databases containing items and their utility values</p>
-                            <a class="fw-medium" href="utilityDB.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/sequence.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Sequence databases</h4>
-                            <p>Sequences contain an ordered set of transactions.</p>
-                            <a class="fw-medium" href="sequenceDB.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/timeseries.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Multiple timeseries databases</h4>
-                            <p>Timeseries data of multiple items grouped by timestamp.</p>
-                            <a class="fw-medium" href="multiTSDB.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/fuzzy.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Fuzzy databases</h4>
-                            <p>Each transaction contains items and their fuzzy membership values.</p>
-                            <a class="fw-medium" href="fuzzyDB.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/uncertain.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Uncertain databases</h4>
-                            <p>Each transaction contains items and their uncertainty values. The values lie between 0 and 1.</p>
-                            <a class="fw-medium" href="uncertainDB.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/streams.jpg" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Streams</h4>
-                            <p>Data arriving at high speeds.<br /><br /></p>
-                            <a class="fw-medium" href="streams.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
+            <div class="h-100 d-inline-flex align-items-center">
+                <a class="btn btn-sm-square bg-white text-primary me-0" href="https://u-aizu.ac.jp/~udayrage/"
+                   target="_blank"><i class="fa-solid fa-building-columns"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1"
+                   href="https://www.linkedin.com/in/uday-kiran-rage-715aa3179/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1"
+                   href="https://www.researchgate.net/profile/Uday-Rage" target="_blank"><i
+                        class="fa-brands fa-researchgate"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1"
+                   href="https://scholar.google.com/citations?user=jjFBiNMAAAAJ&hl=en&oi=ao" target="_blank"><i
+                        class="fa fa-graduation-cap"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-0"
+                   href="https://orcid.org/0000-0002-5417-0289" target="_blank"><i
+                        class="fa-brands fa-orcid"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-0"
+                   href="https://www.scopus.com/authid/detail.uri?authorId=57200830513" target="_blank"><i
+                        class="fa-solid fa-s"></i></a>
+                <!-- <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/profile.php?id=100072145825581" target="_blank"><i class="fab fa-facebook-f"></i></a> -->
+                <a class="btn btn-sm-square bg-white text-primary me-0" href="https://github.com/UdayLab/PAMI"
+                   target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
     </div>
-    <!-- Service End -->
+</div>
+<!-- Topbar End -->
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">PAMI: PAttern MIning</a>, All Right Reserved.
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary">PAMI</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="people.html" class="nav-item nav-link">People</a>
+            <a href="installation.html" class="nav-item nav-link">Maintenance</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User's Manual</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a href="structure.html" class="dropdown-item">Structure of PAMI</a>
+                    <a href="dataPreparation.html" class="dropdown-item">Data preparation</a>
+                    <a href="df2db.html" class="dropdown-item">DataFrame2Database</a>
+                    <a href="syntheticDataGenerator.html" class="dropdown-item">Synthetic data generators</a>
+                    <a href="algoImplementation.html" class="dropdown-item">Algorithm implementation</a>
+                    <a href="visualization.html" class="dropdown-item">Visualization</a>
+                    <a href="latexFigures.html" class="dropdown-item">Latex figures</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Developer's Manual</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a href="structure.html" class="dropdown-item">Structure of PAMI</a>
+                    <a href="executingAlgorithms.html" class="dropdown-item">Fork, Sync, Push, and Pull request</a>
+                    <a href="casing.html" class="dropdown-item">Code casing</a>
+                    <a href="documentation.html" class="dropdown-item">Documentation</a>
+                    <a href="abc.html" class="dropdown-item">Abstract Base Class</a>
+                    <a href="codingAlgo.html" class="dropdown-item">Coding an Algorithm</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tutorials</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a href="vscode.html" class="dropdown-item">VS Code</a>
+                    <a href="pycharm.html" class="dropdown-item">PyCharm</a>
+                    <a href="notebooks.html" class="dropdown-item">Jupyter Notebooks</a>
+                    <a href="colab.html" class="dropdown-item">Google Colab</a>
+                    <a href="others.html" class="dropdown-item">Others</a>
+                </div>
+            </div>
+            <a href="https://github.com/orgs/UdayLab/discussions" class="nav-item nav-link"
+               target="_blank">Discussions</a>
+            <a href="https://github.com/UdayLab/PAMI/issues" class="nav-item nav-link" target="_blank">Issues</a>
+        </div>
+        <a href="datasets.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Datasets<i
+                class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+
+<!-- Service Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="section-title text-center">
+            <h1 class="display-5 mb-5">Choose the database type</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="img/transactional.jpg" alt="">
                     </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                    <div class="p-4 text-center border border-5 border-light border-top-0">
+                        <h4 class="mb-3">Transactional databases</h4>
+                        <p>Each transaction contains items seperated with a seperator.</p>
+                        <a class="fw-medium" href="transactionalDB.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="img/temporal.jpg" alt="">
+                    </div>
+                    <div class="p-4 text-center border border-5 border-light border-top-0">
+                        <h4 class="mb-3">Temporal databases</h4>
+                        <p>Transactions containing timestamp and items.</p>
+                        <a class="fw-medium" href="temporalDB.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="img/utility.jpg" alt="">
+                    </div>
+                    <div class="p-4 text-center border border-5 border-light border-top-0">
+                        <h4 class="mb-3">Utility databases</h4>
+                        <p>Databases containing items and their utility values</p>
+                        <a class="fw-medium" href="utilityDB.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="img/georeferencial.jpg" alt="">
+                    </div>
+                    <div class="p-4 text-center border border-5 border-light border-top-0">
+                        <h4 class="mb-3">Geo-referenced databases</h4>
+                        <p>Transactions contain static spatial items.</p>
+                        <a class="fw-medium" href="georeferencedDB.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="img/sequence.jpg" alt="">
+                    </div>
+                    <div class="p-4 text-center border border-5 border-light border-top-0">
+                        <h4 class="mb-3">Sequence databases</h4>
+                        <p>Sequences contain an ordered set of transactions.</p>
+                        <a class="fw-medium" href="sequenceDB.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="img/timeseries.jpg" alt="">
+                    </div>
+                    <div class="p-4 text-center border border-5 border-light border-top-0">
+                        <h4 class="mb-3">Multiple timeseries databases</h4>
+                        <p>Timeseries data of multiple items grouped by timestamp.</p>
+                        <a class="fw-medium" href="multiTSDB.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="img/fuzzy.jpg" alt="">
+                    </div>
+                    <div class="p-4 text-center border border-5 border-light border-top-0">
+                        <h4 class="mb-3">Fuzzy databases</h4>
+                        <p>Each transaction contains items and their fuzzy membership values.</p>
+                        <a class="fw-medium" href="fuzzyDB.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="img/uncertain.jpg" alt="">
+                    </div>
+                    <div class="p-4 text-center border border-5 border-light border-top-0">
+                        <h4 class="mb-3">Uncertain databases</h4>
+                        <p>Each transaction contains items and their uncertainty values. The values lie between 0 and
+                            1.</p>
+                        <a class="fw-medium" href="uncertainDB.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="img/streams.jpg" alt="">
+                    </div>
+                    <div class="p-4 text-center border border-5 border-light border-top-0">
+                        <h4 class="mb-3">Streams</h4>
+                        <p>Data arriving at high speeds.<br/><br/></p>
+                        <a class="fw-medium" href="streams.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+</div>
+<!-- Service End -->
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">PAMI: PAttern MIning</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
 </body>
 
 </html>

@@ -4,12 +4,6 @@
 <head>
     <meta charset="utf-8">
     <title>RAGE Uday Kiran</title>
-    <script src="jquery.js"></script>
-    <script>
-    $(function(){
-      $("#includedContent").load("top.html");
-    });
-    </script>
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -21,12 +15,14 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+          rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3e4f3126d9.js" crossorigin="anonymous"></script>
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -42,100 +38,117 @@
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+<!-- Spinner Start -->
+<div id="spinner"
+     class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<!-- Spinner End -->
+
+
+<!-- Topbar Start -->
+<div class="container-fluid bg-light p-0">
+    <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                <small>The University of Aizu, Aizu-Wakamatsu, Japan</small>
+            </div>
+            <!--
+            <div class="h-100 d-inline-flex align-items-center py-3">
+                <small class="far fa-clock text-primary me-2"></small>
+                <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+            </div>
+            -->
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-phone-alt text-primary me-2"></small>
+                <small><a href="tel:818048340999">+81-8048340999</a></small>
+            </div>
+            <div class="h-100 d-inline-flex align-items-center">
+                <a class="btn btn-sm-square bg-white text-primary me-0" href="https://u-aizu.ac.jp/~udayrage/"
+                   target="_blank"><i class="fa-solid fa-building-columns"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1"
+                   href="https://www.linkedin.com/in/uday-kiran-rage-715aa3179/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1"
+                   href="https://www.researchgate.net/profile/Uday-Rage" target="_blank"><i
+                        class="fa-brands fa-researchgate"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1"
+                   href="https://scholar.google.com/citations?user=jjFBiNMAAAAJ&hl=en&oi=ao" target="_blank"><i
+                        class="fa fa-graduation-cap"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-0"
+                   href="https://orcid.org/0000-0002-5417-0289" target="_blank"><i
+                        class="fa-brands fa-orcid"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-0"
+                   href="https://www.scopus.com/authid/detail.uri?authorId=57200830513" target="_blank"><i
+                        class="fa-solid fa-s"></i></a>
+                <!-- <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/profile.php?id=100072145825581" target="_blank"><i class="fab fa-facebook-f"></i></a> -->
+                <a class="btn btn-sm-square bg-white text-primary me-0" href="https://github.com/UdayLab/PAMI"
+                   target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
         </div>
     </div>
-    <!-- Spinner End -->
+</div>
+<!-- Topbar End -->
 
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-light p-0">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>The University of Aizu, Aizu-Wakamatsu, Japan</small>
-                </div>
-                <!--
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock text-primary me-2"></small>
-                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
-                </div>
-                -->
-            </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+81-8048340999</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/profile.php?id=100072145825581" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.linkedin.com/in/uday-kiran-rage-715aa3179/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.researchgate.net/profile/Uday-Rage" target="_blank"><i class="fas fa-edit"></i></a>
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary">PAMI</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="people.html" class="nav-item nav-link">People</a>
+            <a href="installation.html" class="nav-item nav-link">Maintenance</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User's Manual</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a href="structure.html" class="dropdown-item">Structure of PAMI</a>
+                    <a href="dataPreparation.html" class="dropdown-item">Data preparation</a>
+                    <a href="df2db.html" class="dropdown-item">DataFrame2Database</a>
+                    <a href="syntheticDataGenerator.html" class="dropdown-item">Synthetic data generators</a>
+                    <a href="algoImplementation.html" class="dropdown-item">Algorithm implementation</a>
+                    <a href="visualization.html" class="dropdown-item">Visualization</a>
+                    <a href="latexFigures.html" class="dropdown-item">Latex figures</a>
                 </div>
             </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Developer's Manual</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a href="structure.html" class="dropdown-item">Structure of PAMI</a>
+                    <a href="executingAlgorithms.html" class="dropdown-item">Fork, Sync, Push, and Pull request</a>
+                    <a href="casing.html" class="dropdown-item">Code casing</a>
+                    <a href="documentation.html" class="dropdown-item">Documentation</a>
+                    <a href="abc.html" class="dropdown-item">Abstract Base Class</a>
+                    <a href="codingAlgo.html" class="dropdown-item">Coding an Algorithm</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tutorials</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a href="vscode.html" class="dropdown-item">VS Code</a>
+                    <a href="pycharm.html" class="dropdown-item">PyCharm</a>
+                    <a href="notebooks.html" class="dropdown-item">Jupyter Notebooks</a>
+                    <a href="colab.html" class="dropdown-item">Google Colab</a>
+                    <a href="others.html" class="dropdown-item">Others</a>
+                </div>
+            </div>
+            <a href="https://github.com/orgs/UdayLab/discussions" class="nav-item nav-link" target="_blank">Discussions</a>
+            <a href="https://github.com/UdayLab/PAMI/issues" class="nav-item nav-link" target="_blank">Issues</a>
         </div>
+        <a href="datasets.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Datasets<i class="fa fa-arrow-right ms-3"></i></a>
     </div>
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary">PAMI</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="people.html" class="nav-item nav-link">People</a>
-                <a href="installation.html" class="nav-item nav-link">Maintenance</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User's Manual</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="structure.html" class="dropdown-item">Structure of PAMI</a>
-                        <a href="dataPreparation.html" class="dropdown-item">Data preparation</a>
-                        <a href="df2db.html" class="dropdown-item">DataFrame2Database</a>
-                        <a href="syntheticDataGenerator.html" class="dropdown-item">Synthetic data generators</a>
-                        <a href="algoImplementation.html" class="dropdown-item">Algorithm implementation</a>
-                        <a href="visualization.html" class="dropdown-item">Visualization</a>
-                        <a href="latexFigures.html" class="dropdown-item">Latex figures</a>
-                    </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Developer's Manual</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="structure.html" class="dropdown-item">Structure of PAMI</a>
-                        <a href="executingAlgorithms.html" class="dropdown-item">Fork, Sync, Push, and Pull request</a>
-                        <a href="casing.html" class="dropdown-item">Code casing</a>
-                        <a href="documentation.html" class="dropdown-item">Documentation</a>
-                        <a href="abc.html" class="dropdown-item">Abstract Base Class</a>
-                        <a href="codingAlgo.html" class="dropdown-item">Coding an Algorithm</a>
-                    </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tutorials</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="vscode.html" class="dropdown-item">VS Code</a>
-                        <a href="pycharm.html" class="dropdown-item">PyCharm</a>
-                        <a href="notebooks.html" class="dropdown-item">Jupyter Notebooks</a>
-                        <a href="colab.html" class="dropdown-item">Google Colab</a>
-                        <a href="others.html" class="dropdown-item">Others</a>
-                    </div>
-                </div>
-            <a href="issuesFeedback.html" class="nav-item nav-link">Issues</a>
-            </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Datasets<i class="fa fa-arrow-right ms-3"></i></a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
+</nav>
+<!-- Navbar End -->
 
 <!-- About Start -->
     <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
@@ -152,28 +165,49 @@
                             <h1 class="display-5 mb-4">PYPI</h1>
                         </div>
                         <p class="mb-4 pb-2">
-                            PAMI library is maintained at <a href="https://pypi.org/project/pami/" target="_blank"> Python Package Index (PyPI) repository.</a> Henceforth, the users can install PAMI library using <i>pip</i> command.
+                            PAMI library is maintained at <a href="https://pypi.org/project/pami/" target="_blank"> Python Package Index (PyPI) repository.</a> Henceforth, the users can install and maintain PAMI library using <i>pip</i> command.
                         </p>
 
-                        <b><u>Installation</u></b><br />
+                        <hr />
+                        <h2>1. Installation</h2>
+
                         Depending on the computer hardware and/or type of algorithms you plan to execute to find the patterns, execute anyone of the below-provided commands to install PAMI library.
+
+                        <br /><b><u>Basic installation</u></b><br />
                         <div class="highlight">
-                            <pre class="highlight"><code> pip install pami<br /><br /> pip install 'pami[gpu]' <br /><br /> pip install 'pami[spark]' <br /><br /> pip install 'pami[all]'</code></pre>
+                            <pre class="highlight"><code> pip install pami</code></pre>
+                        </div>
+                        <b><u>CUDA support</u></b><br />
+                        <div class="highlight">
+                            <pre class="highlight"><code>pip install 'pami[gpu]'</code></pre>
                         </div>
 
-                        <b><u>Update</u></b><br />
+                        <b><u>PY-SPARK support</u></b><br />
+                        <div class="highlight">
+                            <pre class="highlight"><code>pip install 'pami[spark]'</code></pre>
+                        </div>
+
+                        <b><u>Complete library</u></b><br />
+                        <div class="highlight">
+                            <pre class="highlight"><code>pip install 'pami[all]'</code></pre>
+                        </div>
+
+                        <hr />
+                        <h2>2. Updating PAMI library</h2>
                         Execute below provided command to update the PAMI library.
                         <div class="highlight">
                             <pre class="highlight"><code> pip install --upgrade pami </code></pre>
                         </div>
 
-                        <b><u>Show contents</u></b><br />
+                        <hr />
+                        <h2>3. Seeing the contents of PAMI library</h2>
                         Execute below provided command to view the basic info on PAMI library.
                         <div class="highlight">
                             <pre class="highlight"><code> pip show pami</code></pre>
                         </div>
 
-                        <b><u>Uninstallation</u></b><br />
+                        <hr />
+                        <h2>4. Uninstalling PAMI library</h2>
                         Execute below provided command to uninstall the PAMI library.
                         <div class="highlight">
                             <pre class="highlight"><code> pip uninstall pami</code></pre>

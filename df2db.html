@@ -6,9 +6,9 @@
     <title>RAGE Uday Kiran</title>
     <script src="jquery.js"></script>
     <script>
-    $(function(){
-      $("#includedContent").load("top.html");
-    });
+        $(function () {
+            $("#includedContent").load("top.html");
+        });
     </script>
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -19,9 +19,10 @@
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+          rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -42,141 +43,134 @@
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+<!-- Spinner Start -->
+<div class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+     id="spinner">
+    <div class="spinner-grow text-primary" role="status" style="width: 3rem; height: 3rem;">
+        <span class="sr-only">Loading...</span>
     </div>
-    <!-- Spinner End -->
+</div>
+<!-- Spinner End -->
 
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-light p-0">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>The University of Aizu, Aizu-Wakamatsu, Japan</small>
-                </div>
-                <!--
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock text-primary me-2"></small>
-                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
-                </div>
-                -->
+<!-- Topbar Start -->
+<div class="container-fluid bg-light p-0">
+    <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                <small>The University of Aizu, Aizu-Wakamatsu, Japan</small>
             </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+81-8048340999</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/profile.php?id=100072145825581" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.linkedin.com/in/uday-kiran-rage-715aa3179/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.researchgate.net/profile/Uday-Rage" target="_blank"><i class="fas fa-edit"></i></a>
-                </div>
+            <!--
+            <div class="h-100 d-inline-flex align-items-center py-3">
+                <small class="far fa-clock text-primary me-2"></small>
+                <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
             </div>
+            -->
         </div>
-    </div>
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary">PAMI</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="people.html" class="nav-item nav-link">People</a>
-                <a href="installation.html" class="nav-item nav-link">Maintenance</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User's Manual</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="structure.html" class="dropdown-item">Structure of PAMI</a>
-                        <a href="dataPreparation.html" class="dropdown-item">Data preparation</a>
-                        <a href="df2db.html" class="dropdown-item">DataFrame2Database</a>
-                        <a href="syntheticDataGenerator.html" class="dropdown-item">Synthetic data generators</a>
-                        <a href="algoImplementation.html" class="dropdown-item">Algorithm implementation</a>
-                        <a href="visualization.html" class="dropdown-item">Visualization</a>
-                        <a href="latexFigures.html" class="dropdown-item">Latex figures</a>
-                    </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Developer's Manual</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="structure.html" class="dropdown-item">Structure of PAMI</a>
-                        <a href="executingAlgorithms.html" class="dropdown-item">Fork, Sync, Push, and Pull request</a>
-                        <a href="casing.html" class="dropdown-item">Code casing</a>
-                        <a href="documentation.html" class="dropdown-item">Documentation</a>
-                        <a href="abc.html" class="dropdown-item">Abstract Base Class</a>
-                        <a href="codingAlgo.html" class="dropdown-item">Coding an Algorithm</a>
-                    </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tutorials</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="vscode.html" class="dropdown-item">VS Code</a>
-                        <a href="pycharm.html" class="dropdown-item">PyCharm</a>
-                        <a href="notebooks.html" class="dropdown-item">Jupyter Notebooks</a>
-                        <a href="colab.html" class="dropdown-item">Google Colab</a>
-                        <a href="others.html" class="dropdown-item">Others</a>
-                    </div>
-                </div>
-            <a href="issuesFeedback.html" class="nav-item nav-link">Issues</a>
+        <div class="col-lg-5 px-5 text-end">
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-phone-alt text-primary me-2"></small>
+                <small>+81-8048340999</small>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Datasets<i class="fa fa-arrow-right ms-3"></i></a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-
-<!--
-<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-    <div class="container about px-lg-0">
-        <div class="row g-0 mx-lg-0">
-            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
-                <div class="position-relative h-100">
-                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
-                         alt="">
-                </div>
-            </div>
-            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                <div class="p-lg-5 pe-lg-0">
-                        WRITE YOUR TEXT HERE
-                </div>
+            <div class="h-100 d-inline-flex align-items-center">
+                <a class="btn btn-sm-square bg-white text-primary me-1"
+                   href="https://www.facebook.com/profile.php?id=100072145825581" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1"
+                   href="https://www.researchgate.net/profile/Uday-Rage" target="_blank"><i
+                        class="fa fa-graduation-cap"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1"
+                   href="https://www.linkedin.com/in/uday-kiran-rage-715aa3179/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-0"
+                   href="https://www.researchgate.net/profile/Uday-Rage" target="_blank"><i class="fas fa-edit"></i></a>
             </div>
         </div>
     </div>
 </div>
-About End -->
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <a class="navbar-brand d-flex align-items-center px-4 px-lg-5" href="index.html">
+        <h2 class="m-0 text-primary">PAMI</h2>
+    </a>
+    <button class="navbar-toggler me-4" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a class="nav-item nav-link active" href="index.html">Home</a>
+            <a class="nav-item nav-link" href="people.html">People</a>
+            <a class="nav-item nav-link" href="installation.html">Maintenance</a>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">User's Manual</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a class="dropdown-item" href="structure.html">Structure of PAMI</a>
+                    <a class="dropdown-item" href="dataPreparation.html">Data preparation</a>
+                    <a class="dropdown-item" href="df2db.html">DataFrame2Database</a>
+                    <a class="dropdown-item" href="syntheticDataGenerator.html">Synthetic data generators</a>
+                    <a class="dropdown-item" href="algoImplementation.html">Algorithm implementation</a>
+                    <a class="dropdown-item" href="visualization.html">Visualization</a>
+                    <a class="dropdown-item" href="latexFigures.html">Latex figures</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Developer's Manual</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a class="dropdown-item" href="structure.html">Structure of PAMI</a>
+                    <a class="dropdown-item" href="executingAlgorithms.html">Fork, Sync, Push, and Pull request</a>
+                    <a class="dropdown-item" href="casing.html">Code casing</a>
+                    <a class="dropdown-item" href="documentation.html">Documentation</a>
+                    <a class="dropdown-item" href="abc.html">Abstract Base Class</a>
+                    <a class="dropdown-item" href="codingAlgo.html">Coding an Algorithm</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Tutorials</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a class="dropdown-item" href="vscode.html">VS Code</a>
+                    <a class="dropdown-item" href="pycharm.html">PyCharm</a>
+                    <a class="dropdown-item" href="notebooks.html">Jupyter Notebooks</a>
+                    <a class="dropdown-item" href="colab.html">Google Colab</a>
+                    <a class="dropdown-item" href="others.html">Others</a>
+                </div>
+            </div>
+            <a class="nav-item nav-link" href="issuesFeedback.html">Issues</a>
+        </div>
+        <a class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" href="">Datasets<i class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+</nav>
+<!-- Navbar End -->
 
 
 <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
     <div class="container about px-lg-0">
         <div class="row g-0 mx-lg-0">
-            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 300px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
-                         alt="">
+                    <img alt="" class="position-absolute img-fluid w-50 h-100" src="img/dataframe.svg"
+                         style="object-fit: cover;">
                 </div>
             </div>
             <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                 <div class="p-lg-5 pe-lg-0">
-                    <h2>Introduction</h2>
-                    This article covers the following topics:
-                    <ol>
-                        <li>Dense dataframe</li>
-                        <li>Sparse dataframe</li>
-                        <li>Approaches to convert a dataframe into various database formats</li>
-                        <li>An advanced technique to convert a dataframe to dense database</li>
-                    </ol>
+                    <h2>What is a Dataframe?</h2>
+                    <p>
+                        A DataFrame is a data structure that organizes data into a 2-dimensional table of rows and columns,
+                    much like a spreadsheet. DataFrames are one of the most common data structures used in modern data
+                    analytics because they are a flexible and intuitive way of storing and working with data.
+                    </p>
+                    <p>
+                        This article covers the following topics:
+                            <ol>
+                                <li>Dense dataframe</li>
+                                <li>Sparse dataframe</li>
+                                <li>Approaches to convert a dataframe into various database formats</li>
+                            </ol>
+                    </p>
                 </div>
             </div>
         </div>
@@ -188,27 +182,23 @@ About End -->
         <div class="row g-0 mx-lg-0">
             <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
-                         alt="">
-                </div>
-            </div>
-            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                <div class="p-lg-5 pe-lg-0">
-                    <h2>Dense dataframe</h2>
-                    <h3>Description</h3>
-                    <p>A dense dataframe is basically a  matrix in which the first column represents the row-identifier/timestamp
-                    and the remaining columns represent the items and their values. T</p>
+                    <div class="p-lg-5 pe-lg-0">
+                        <h2>Dense dataframe</h2>
+                        <h3>Description</h3>
+                        <p>A dense dataframe is basically a matrix in which the first column represents the
+                            row-identifier/timestamp
+                            and the remaining columns represent the items and their values. T</p>
 
-                    <h3>Format of a dense dataframe</h3>
-                    <div class="language-plaintext highlighter-rouge">
-                        <div class="highlight">
-                            <pre class="highlight"><code>  rowIdentifier/timestamp   Item1   Item2   ... ItemN</code></pre>
+                        <h3>Format of a dense dataframe</h3>
+                        <div class="language-plaintext highlighter-rouge">
+                            <div class="highlight">
+                                <pre class="highlight"><code>  rowIdentifier/timestamp   Item1   Item2   ... ItemN</code></pre>
+                            </div>
                         </div>
-                    </div>
 
-                    <h3 id="an-example">An example</h3>
-                    <table>
-                        <thead>
+                        <h3 id="an-example">An example</h3>
+                        <table>
+                            <thead>
                             <tr>
                                 <th>timestamp</th>
                                 <th>Bread</th>
@@ -217,8 +207,8 @@ About End -->
                                 <th>Books</th>
                                 <th>Pencil</th>
                             </tr>
-                        </thead>
-                        <tbody>
+                            </thead>
+                            <tbody>
                             <tr>
                                 <td>1</td>
                                 <td>3</td>
@@ -251,87 +241,81 @@ About End -->
                                 <td>0</td>
                                 <td>0</td>
                             </tr>
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
 
-                    <p>In the above dataframe (or table), the first transaction (or row) provides the information that a customer has purchased the 3 packets
-                    of Bread, 1 bottle of Jam, 3 packets of Butter at the timestamp of 1. The second transaction provides the information
-                    that a customer has purchased 7 packets of Bread, 2 bottles of Jam, 10 Books and 20 Pencils. Similar arguments can be
-                    made for the remaining transactions in the above dataframe.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-    <div class="container about px-lg-0">
-        <div class="row g-0 mx-lg-0">
-            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
-                <div class="position-relative h-100">
-                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
-                         alt="">
+                        <p>In the above dataframe (or table), the first transaction (or row) provides the information
+                            that a
+                            customer has purchased the 3 packets
+                            of Bread, 1 bottle of Jam, 3 packets of Butter at the timestamp of 1. The second transaction
+                            provides the information
+                            that a customer has purchased 7 packets of Bread, 2 bottles of Jam, 10 Books and 20 Pencils.
+                            Similar arguments can be
+                            made for the remaining transactions in the above dataframe.</p>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                 <div class="p-lg-5 pe-lg-0">
-                        <h2>Sparse dataframe</h2>
-                        <h3>Description</h3>
-                        <p>A sparse dataframe is basically a (non-sparse) matrix in which the first column represents the row-identifier/timestamp,
-                        the second column represents the item, and the third column represents the value of the corresponding item.</p>
+                    <h2>Sparse dataframe</h2>
+                    <h3>Description</h3>
+                    <p>A sparse dataframe is basically a (non-sparse) matrix in which the first column represents the
+                        row-identifier/timestamp,
+                        the second column represents the item, and the third column represents the value of the
+                        corresponding item.</p>
 
-                        <h3>Format of a sparse data frame</h3>
+                    <h3>Format of a sparse data frame</h3>
 
-                        <div class="language-plaintext highlighter-rouge">
-                            <div class="highlight">
-                                <pre class="highlight"> <code>  rowIdentifier/timestamp   Item1   Value</code></pre>
-                            </div>
+                    <div class="language-plaintext highlighter-rouge">
+                        <div class="highlight">
+                            <pre class="highlight"> <code>  rowIdentifier/timestamp   Item1   Value</code></pre>
                         </div>
+                    </div>
 
-                        <h3>An example</h3>
-                        <p>A sparse dataframe generated from the customer purchase database is as follows:</p>
+                    <h3>An example</h3>
+                    <p>A sparse dataframe generated from the customer purchase database is as follows:</p>
 
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>timestamp</th>
-                                    <th>Item</th>
-                                    <th>Value</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Bread</td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Jam</td>
-                                    <td>1</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Butter</td>
-                                    <td>2</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Bread</td>
-                                    <td>7</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jam</td>
-                                    <td>2</td>
-                                </tr>
-                                <tr>
-                                    <td>…</td>
-                                    <td>…</td>
-                                    <td>…</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>timestamp</th>
+                            <th>Item</th>
+                            <th>Value</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Bread</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Jam</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Butter</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Bread</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jam</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>…</td>
+                            <td>…</td>
+                            <td>…</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -340,247 +324,295 @@ About End -->
 
 
 <div class="container-xxl py-5">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Converting a data frame into various data forms</h1>
+    <div class="container">
+        <div class="section-title text-center">
+            <h1 class="display-5 mb-5">Converting a dataframe into various database forms</h1>
+        </div>
+        <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-12 text-center">
+                <ul class="list-inline mb-5" id="portfolio-flters">
+                    <li class="mx-2 active" data-filter="*">All</li>
+                    <li class="mx-2" data-filter=".first">Dense dataframe</li>
+                    <li class="mx-2" data-filter=".second">Sparse dataframe</li>
+                </ul>
             </div>
-            <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="col-12 text-center">
-                    <ul class="list-inline mb-5" id="portfolio-flters">
-                        <li class="mx-2 active" data-filter="*">All</li>
-                        <li class="mx-2" data-filter=".first">Dense dataframe</li>
-                        <li class="mx-2" data-filter=".second">Sparse dataframe</li>
-                    </ul>
+        </div>
+        <div class="row g-4 portfolio-container">
+            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img alt="" class="img-fluid w-100" src="img/dense2transactionalDB.jpg">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="denseDF2transactionalDB.html"><i
+                                    class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <a href="denseDF2transactionalDB.html" target="_blank"><p class="text-primary fw-medium mb-2">
+                            Dense dataframe to transactional database</p></a>
+                        <h5 class="lh-base mb-0">Article describes the process to convert a dense dataframe into a
+                            transactional database. </h5>
+                    </div>
                 </div>
             </div>
-            <div class="row g-4 portfolio-container">
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/dense2transactionalDB.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="denseDF2transactionalDB.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <a href="denseDF2transactionalDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Dense dataframe to transactional database</p></a>
-                            <h5 class="lh-base mb-0">Article describes the process to convert a dense dataframe into a transactional database. </h5>
+            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img alt="" class="img-fluid w-100" src="img/sparse2transactionalDB.jpg">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="sparseDF2transactionalDB.html"><i
+                                    class="fa fa-link"></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/sparse2transactionalDB.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="sparseDF2transactionalDB.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <a href="sparseDF2transactionalDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Sparse dataframe to transactional database</p></a>
-                            <h5 class="lh-base mb-0">Article describes the process to convert a sparse dataframe into a transactional database.</h5>
-                        </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <a href="sparseDF2transactionalDB.html" target="_blank"><p class="text-primary fw-medium mb-2">
+                            Sparse dataframe to transactional database</p></a>
+                        <h5 class="lh-base mb-0">Article describes the process to convert a sparse dataframe into a
+                            transactional database.</h5>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/dense2TemporalDB.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="denseDF2temporlDB.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <a href="denseDF2temporlDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Dense dataframe to temporal database</p></a>
-                            <h5 class="lh-base mb-0">Article describes the process to convert a dense dataframe into a temporal database.</h5>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img alt="" class="img-fluid w-100" src="img/dense2TemporalDB.jpg">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="denseDF2temporlDB.html"><i
+                                    class="fa fa-link"></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/sparse2TemporalDB.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="sparseDF2temporlDB.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <a href="sparseDF2temporlDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Sparse dataframe to temporal database</p></a>
-                            <h5 class="lh-base mb-0">Article describes the process to convert a sparse dataframe into a temporal database.</h5>
-                        </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <a href="denseDF2temporlDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Dense
+                            dataframe to temporal database</p></a>
+                        <h5 class="lh-base mb-0">Article describes the process to convert a dense dataframe into a
+                            temporal database.</h5>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/dense2UtilityDB.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="denseDF2utilityDB.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <a href="denseDF2utilityDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Dense dataframe to utility database</p></a>
-                            <h5 class="lh-base mb-0">Article describes the process to convert a dense dataframe into a utility database.</h5>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img alt="" class="img-fluid w-100" src="img/sparse2TemporalDB.jpg">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="sparseDF2temporlDB.html"><i
+                                    class="fa fa-link"></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/sparse2utilityDB.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="sparseDF2utilityDB.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <a href="sparseDF2utilityDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Sparse dataframe to utility database</p></a>
-                            <h5 class="lh-base mb-0">Article describes the process to convert a sparse dataframe into a utility database.</h5>
-                        </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <a href="sparseDF2temporlDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Sparse
+                            dataframe to temporal database</p></a>
+                        <h5 class="lh-base mb-0">Article describes the process to convert a sparse dataframe into a
+                            temporal database.</h5>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/dense2FuzzyDB.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="dense2FuzzyDB.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <a href="dense2FuzzyDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Dense dataframe to fuzzy database</p></a>
-                            <h5 class="lh-base mb-0">Article describes the process to convert a dense dataframe into a fuzzy database.</h5>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img alt="" class="img-fluid w-100" src="img/dense2UtilityDB.jpg">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="denseDF2utilityDB.html"><i
+                                    class="fa fa-link"></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/sparse2FuzzyDB.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="sparse2FuzzyDB.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <a href="sparse2FuzzyDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Sparse dataframe to fuzzy database</p></a>
-                            <h5 class="lh-base mb-0">Article describes the process to convert a sparse dataframe into a fuzzy database.</h5>
-                        </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <a href="denseDF2utilityDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Dense
+                            dataframe to utility database</p></a>
+                        <h5 class="lh-base mb-0">Article describes the process to convert a dense dataframe into a
+                            utility database.</h5>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/dense2UncertainDB.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="dense2UncertainDB.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <a href="dense2UncertainDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Dense dataframe to uncertain database</p></a>
-                            <h5 class="lh-base mb-0">Article describes the process to convert a dense dataframe into a uncertain database.</h5>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img alt="" class="img-fluid w-100" src="img/sparse2utilityDB.jpg">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="sparseDF2utilityDB.html"><i
+                                    class="fa fa-link"></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/sparse2uncertainDB.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="sparse2uncertainDB.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <a href="sparse2uncertainDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Sparse dataframe to uncertain database</p></a>
-                            <h5 class="lh-base mb-0">Article describes the process to convert a sparse dataframe into a uncertain database.</h5>
-                        </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <a href="sparseDF2utilityDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Sparse
+                            dataframe to utility database</p></a>
+                        <h5 class="lh-base mb-0">Article describes the process to convert a sparse dataframe into a
+                            utility database.</h5>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/dense2SequenceDB.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="dense2SequenceDB.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <a href="dense2SequenceDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Dense dataframe to sequence database</p></a>
-                            <h5 class="lh-base mb-0">Article describes the process to convert a dense dataframe into a sequence database.</h5>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img alt="" class="img-fluid w-100" src="img/dense2FuzzyDB.jpg">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="dense2FuzzyDB.html"><i
+                                    class="fa fa-link"></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/sparse2SequenceDB.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="sparse2SequenceDB.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <a href="sparse2SequenceDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Sparse dataframe to sequence database</p></a>
-                            <h5 class="lh-base mb-0">Article describes the process to convert a sparse dataframe into a sequence database.</h5>
-                        </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <a href="dense2FuzzyDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Dense
+                            dataframe to fuzzy database</p></a>
+                        <h5 class="lh-base mb-0">Article describes the process to convert a dense dataframe into a fuzzy
+                            database.</h5>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/dense2GeoreferencedDB.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="dense2GeoreferencedDB.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <a href="dense2GeoreferencedDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Dense dataframe to geo-referenced database</p></a>
-                            <h5 class="lh-base mb-0">Article describes the process to convert a dense dataframe into a geo-referenced database.</h5>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img alt="" class="img-fluid w-100" src="img/sparse2FuzzyDB.jpg">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="sparse2FuzzyDB.html"><i
+                                    class="fa fa-link"></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/sparse2georeferencedDB.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="sparse2georeferencedDB.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <a href="sparse2georeferencedDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Sparse dataframe to geo-referenced database</p></a>
-                            <h5 class="lh-base mb-0">Article describes the process to convert a sparse dataframe into a geo-referenced database.</h5>
-                        </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <a href="sparse2FuzzyDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Sparse
+                            dataframe to fuzzy database</p></a>
+                        <h5 class="lh-base mb-0">Article describes the process to convert a sparse dataframe into a
+                            fuzzy database.</h5>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/dense2MultipleTS.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="dense2MultipleTS.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <a href="dense2MultipleTS.html" target="_blank"><p class="text-primary fw-medium mb-2">Dense dataframe to multiple timeseries</p></a>
-                            <h5 class="lh-base mb-0">Article describes the process to convert a dense dataframe into a multiple timeseries.</h5>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img alt="" class="img-fluid w-100" src="img/dense2UncertainDB.jpg">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="dense2UncertainDB.html"><i
+                                    class="fa fa-link"></i></a>
                         </div>
                     </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <a href="dense2UncertainDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Dense
+                            dataframe to uncertain database</p></a>
+                        <h5 class="lh-base mb-0">Article describes the process to convert a dense dataframe into a
+                            uncertain database.</h5>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/sparse2multipleTimeseries.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="sparse2multipleTimeseries.html"><i class="fa fa-link"></i></a>
-                            </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img alt="" class="img-fluid w-100" src="img/sparse2uncertainDB.jpg">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="sparse2uncertainDB.html"><i
+                                    class="fa fa-link"></i></a>
                         </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <a href="sparse2multipleTimeseries.html" target="_blank"><p class="text-primary fw-medium mb-2">Sparse dataframe to multiple timeseries</p></a>
-                            <h5 class="lh-base mb-0">Article describes the process to convert a sparse dataframe into a multiple timeseries.</h5>
+                    </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <a href="sparse2uncertainDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Sparse
+                            dataframe to uncertain database</p></a>
+                        <h5 class="lh-base mb-0">Article describes the process to convert a sparse dataframe into a
+                            uncertain database.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img alt="" class="img-fluid w-100" src="img/dense2SequenceDB.jpg">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="dense2SequenceDB.html"><i
+                                    class="fa fa-link"></i></a>
                         </div>
+                    </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <a href="dense2SequenceDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Dense
+                            dataframe to sequence database</p></a>
+                        <h5 class="lh-base mb-0">Article describes the process to convert a dense dataframe into a
+                            sequence database.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img alt="" class="img-fluid w-100" src="img/sparse2SequenceDB.jpg">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="sparse2SequenceDB.html"><i
+                                    class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <a href="sparse2SequenceDB.html" target="_blank"><p class="text-primary fw-medium mb-2">Sparse
+                            dataframe to sequence database</p></a>
+                        <h5 class="lh-base mb-0">Article describes the process to convert a sparse dataframe into a
+                            sequence database.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img alt="" class="img-fluid w-100" src="img/dense2GeoreferencedDB.jpg">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="dense2GeoreferencedDB.html"><i
+                                    class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <a href="dense2GeoreferencedDB.html" target="_blank"><p class="text-primary fw-medium mb-2">
+                            Dense dataframe to geo-referenced database</p></a>
+                        <h5 class="lh-base mb-0">Article describes the process to convert a dense dataframe into a
+                            geo-referenced database.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img alt="" class="img-fluid w-100" src="img/sparse2georeferencedDB.jpg">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="sparse2georeferencedDB.html"><i
+                                    class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <a href="sparse2georeferencedDB.html" target="_blank"><p class="text-primary fw-medium mb-2">
+                            Sparse dataframe to geo-referenced database</p></a>
+                        <h5 class="lh-base mb-0">Article describes the process to convert a sparse dataframe into a
+                            geo-referenced database.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img alt="" class="img-fluid w-100" src="img/dense2MultipleTS.jpg">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="dense2MultipleTS.html"><i
+                                    class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <a href="dense2MultipleTS.html" target="_blank"><p class="text-primary fw-medium mb-2">Dense
+                            dataframe to multiple timeseries</p></a>
+                        <h5 class="lh-base mb-0">Article describes the process to convert a dense dataframe into a
+                            multiple timeseries.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img alt="" class="img-fluid w-100" src="img/sparse2multipleTimeseries.jpg">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="sparse2multipleTimeseries.html"><i
+                                    class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <a href="sparse2multipleTimeseries.html" target="_blank"><p class="text-primary fw-medium mb-2">
+                            Sparse dataframe to multiple timeseries</p></a>
+                        <h5 class="lh-base mb-0">Article describes the process to convert a sparse dataframe into a
+                            multiple timeseries.</h5>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -602,7 +634,7 @@ About End -->
 
 
 <!-- Back to Top -->
-<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+<a class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top" href="#"><i class="bi bi-arrow-up"></i></a>
 
 
 <!-- JavaScript Libraries -->

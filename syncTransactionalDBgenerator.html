@@ -162,9 +162,13 @@
 databaseSize = 100000
 numberOfItems = 2000
 averageLengthOfTransaction = 10
+seperator = '\t'
 
 #initialize the algorithm
-alg = tdb.transactionalDatabase(databaseSize, numberOfItems, averageLengthOfTransaction)
+alg = tdb.transactionalDatabase(databaseSize, \
+                        numberOfItems, \
+                        averageLengthOfTransaction,\
+                        seperator)
 
 #execute the algorithm
 alg.generate()
