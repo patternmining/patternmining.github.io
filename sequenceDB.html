@@ -139,15 +139,70 @@
 <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
     <div class="container about px-lg-0">
         <div class="row g-0 mx-lg-0">
-            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
-                <div class="position-relative h-100">
-                    <img class="position-absolute img-fluid w-100 h-100" src="img/bull.jpg" style="object-fit: cover;"
-                         alt="">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 250px;">
+                <div class="position-relative w-100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img alt="" class="position-absolute img-fluid w-50"
+                         src="img/sequence.jpg"
+                         style="object-fit: cover;">
                 </div>
             </div>
             <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                 <div class="p-lg-5 pe-lg-0">
-                    Coming soon...
+                    <div class="section-title text-start">
+                        <h1 class="display-5 mb-4">Sequence database</h1>
+                    </div>
+                    <h3 id="description">Description</h3>
+                     <p>A sequence represents a collection of itemsets (or transactions) in a particular order. A sequence database is a collection of sequences and their sequence identifiers. An example of a
+                        geo-referenced transactional database is as follows:
+                     </p>
+                     <table>
+                        <thead>
+                        <tr>
+                            <th>SID</th>
+                            <th>Items</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>{a b c d} {a d e} {a e f}</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>{a b c} {b d e} {c d e}</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>{a e f} {c d}</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>{a e f} {a c d} {c e}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <hr />
+                    <h2>Rules to create a sequence database</h2>
+                    <ol>
+                        <li>Items in an itemset have to be seperated by a tab space.</li>
+                        <li>Itemsets in a sequence are seperated using '-1' as a seperator. </li>
+                        <li>Each sequence is represented as a line</li>
+                        <li>The sequence identifier, <i>sid</i>, is not needed to create a sequence database.</li>
+                    </ol>
+                    <hr />
+                    <h3 id="format-of-a-transactional-database">Format of a sequence</h3>
+                    <div class="language-plaintext highlighter-rouge">
+                        <div class="highlight">
+                            <pre class="highlight"><code>item1&lt;sep&gt;item2&lt;sep&gt;...&lt;sep&gt;itemA : item1&lt;sep&gt;item2&lt;sep&gt;...&lt;sep&gt;itemB : item1&lt;sep&gt;item2&lt;sep&gt;...&lt;sep&gt;itemC</code></pre>
+                        </div>
+                    </div>
+
+                    <hr/>
+                    <h3>Example</h3>
+                    <div class="highlight">
+                        <pre class="highlight"><code>a b c d : a d e : a e f<br/>a b c : b d e : c d e<br/>a e f : c <br />a e f : a c d : c e</code></pre>
+                    </div>
                 </div>
             </div>
         </div>
